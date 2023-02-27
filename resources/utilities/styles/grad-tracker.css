@@ -1,0 +1,33 @@
+@import url("button-colors.css");
+@import url("forms.css");
+
+body {
+    background-color: #f63939;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+header>h1 {
+    margin-bottom: 0pt;
+    font-size: 32pt;
+    text-transform: uppercase;
+}
+
+header>h2 {
+    margin-top: 0pt;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}

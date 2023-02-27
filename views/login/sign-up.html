@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Graduation Tracker</title>
+        <link rel="Stylesheet" type="text/css" href="../../resources/utilities/styles/grad-tracker.css">
+        <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <!-- First form asking for type of signup.-->
+            <form id="f0">
+                <fieldset>
+                    <h1>Sign Up</h1>
+                    <p>
+                        Welcome to Common Wealth University Graduation Tracker.
+                        Please select a signup option.
+                    </p>                    
+                </fieldset>
+               <fieldset>
+                    <section>
+                        <button type="button" onclick="nextForm('f0', 'f1a')">Use Email</button>
+                        <p> OR </p>
+                        <button type="button" onclick="nextForm('f0', 'f1b')">Use ID</button>
+                    </section>
+                </fieldset>
+            </form>
+
+            <!-- Form for signing up with an school email. -->
+            <form id="f1a" style="display: none;">
+                <fieldset>
+                    
+                    <legend>Student Information</legend>
+                    
+                    <!-- Ask for a school email address. -->
+                    <label>Email Address*</label>
+                    <input type="email" name="email address" placeholder="username@school.edu" size="32" required> 
+                    
+                    <!-- Form Navigation -->
+                    <section class="right-align">
+                        <button class="neutral" type="button" onclick="prevForm('f1a')">Back</button>
+                        <button type="button" onclick="nextForm('f1a', 'f2a')">Next</button>
+                    </section>
+
+                </fieldset>
+            </form>
+
+            <!-- Form for signing up with a school id.-->
+            <form id="f1b" style="display: none;">
+                <fieldset>
+                    
+                    <legend>Student Information</legend>
+
+                    <!-- Ask for campus for the student id. -->
+                    <label>Campus*</label>
+                    <select name="campus" required>
+                        <option value="">Select an option...</option>
+                        <option value="bloomsburg">Bloomsburg</option>
+                        <option value="lock haven">Lock Haven</option>
+                        <option value="mansfield">Mansfield</option>
+                    </select>
+                    
+                    <!-- Ask for student id. -->
+                    <label>Student ID*</label>
+                    <input type="text" name="student id" placeholder="ex. 1234.." size="6" required>
+
+                    
+                </fieldset>
+                <fieldset>
+                    <!-- Form Navigation -->
+                    <section class="right-align" required>
+                        <button class="neutral" type="button" onclick="prevForm('f1b')">Back</button>
+                        <button type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
+                    </section>
+                </fieldset>
+            </form>
+
+            <!-- Second form asking for personal information. -->
+            <form id="f2a" style="display: none;">
+                <fieldset>
+
+                    <legend>Personal Information</legend>
+
+                    <!-- Ask for a first name. -->
+                    <label>First Name</label>
+                    <input type="text" name="first name" size="32">
+
+                    <!-- Ask for a last name. -->
+                    <label>Last Name</label>
+                    <input type="text" name="last name" size="32">
+
+                    
+                </fieldset>
+                <fieldset>
+                    <section class="right-align">
+                        <button class="neutral" type="button" onclick="prevForm('f2a')">Back</button>
+                        <button type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
+                    </section>
+                </fieldset>
+            </form>
+
+            <!-- Third form asking for a password. -->
+            <form id="f3a" style="display: none;">
+                <fieldset>
+
+                    <legend>Password</legend>
+
+                    <label>Create Password*</label>
+                    <input type="password" name="password" size="32" required>
+
+                    <label>Confirm Password*</label>
+                    <input type="password" name="new password" size="32" required>
+
+                    <label>Password Strength</label>
+                    <meter min="0" max="5" low="1" optimum="3" high="4" value="0"></meter> 
+                    
+                </fieldset>
+                <fieldset>
+                    <section class="right-align">
+                        <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
+                    </section>
+                </fieldset>
+            </form>
+    </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
