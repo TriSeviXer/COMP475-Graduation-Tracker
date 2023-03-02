@@ -9,32 +9,29 @@
     <body>
         <main>
             <!-- First form asking for type of signup.-->
-            <form id="f0">
-                <fieldset>
+            <form action= "../../resources/utilities/includes/signUp.inc.php" >
+                <fieldset id="f0">
                     <h1>Sign Up</h1>
                     <p>
                         Welcome to Common Wealth University Graduation Tracker.
                         Please select a signup option.
                     </p>                    
-                </fieldset>
-               <fieldset>
+                
                     <section>
                         <button type="button" onclick="nextForm('f0', 'f1a')">Use Email</button>
                         <p> OR </p>
                         <button type="button" onclick="nextForm('f0', 'f1b')">Use ID</button>
                     </section>
                 </fieldset>
-            </form>
 
             <!-- Form for signing up with an school email. -->
-            <form id="f1a" style="display: none;">
-                <fieldset>
+                <fieldset id="f1a" style="display: none;">
                     
                     <legend>Student Information</legend>
                     
                     <!-- Ask for a school email address. -->
                     <label>Email Address*</label>
-                    <input type="email" name="email address" placeholder="username@school.edu" size="32" required> 
+                    <input type="email" name="email address" placeholder="username@school.edu" size="32" > 
                     
                     <!-- Form Navigation -->
                     <section class="right-align">
@@ -43,17 +40,15 @@
                     </section>
 
                 </fieldset>
-            </form>
 
             <!-- Form for signing up with a school id.-->
-            <form id="f1b" style="display: none;">
-                <fieldset>
+                <fieldset id="f1b" style="display: none;">
                     
                     <legend>Student Information</legend>
 
                     <!-- Ask for campus for the student id. -->
                     <label>Campus*</label>
-                    <select name="campus" required>
+                    <select name="campus" >
                         <option value="">Select an option...</option>
                         <option value="bloomsburg">Bloomsburg</option>
                         <option value="lock haven">Lock Haven</option>
@@ -62,22 +57,21 @@
                     
                     <!-- Ask for student id. -->
                     <label>Student ID*</label>
-                    <input type="text" name="student id" placeholder="ex. 1234.." size="6" required>
+                    <input type="text" name="student id" placeholder="ex. 1234.." size="6" >
 
                     
-                </fieldset>
-                <fieldset>
+          
                     <!-- Form Navigation -->
                     <section class="right-align" required>
                         <button class="neutral" type="button" onclick="prevForm('f1b')">Back</button>
                         <button type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
                     </section>
                 </fieldset>
-            </form>
+           
 
             <!-- Second form asking for personal information. -->
-            <form id="f2a" style="display: none;">
-                <fieldset>
+            
+                <fieldset id="f2a" style="display: none;">
 
                     <legend>Personal Information</legend>
 
@@ -90,18 +84,15 @@
                     <input type="text" name="last name" size="32">
 
                     
-                </fieldset>
-                <fieldset>
+                
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f2a')">Back</button>
                         <button type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
                     </section>
                 </fieldset>
-            </form>
 
             <!-- Third form asking for a password. -->
-            <form id="f3a" style="display: none;">
-                <fieldset>
+                <fieldset id="f3a" style="display: none;">
 
                     <legend>Password</legend>
 
@@ -114,10 +105,10 @@
                     <label>Password Strength</label>
                     <meter min="0" max="5" low="1" optimum="3" high="4" value="0"></meter> 
                     
-                </fieldset>
-                <fieldset>
+                
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
+                        <button type="submit" type="submit">submit</button>
                     </section>
                 </fieldset>
             </form>
