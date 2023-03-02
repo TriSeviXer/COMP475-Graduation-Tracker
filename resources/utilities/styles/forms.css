@@ -1,11 +1,19 @@
+/*
+
+    Style sheet for website forms.
+
+*/
+
 :root {
 
+    /* Form coloring options. */
     --frm-form-color: #FFFFFF;
     --frm-form-shadow-color: #6e6e6e;
     --frm-fieldset-border-color: #e7e7e7;
 
 }
 
+/* General form properties. */
 form {
 
     margin: auto;
@@ -24,7 +32,8 @@ form {
 
 }
 
-fieldset {
+/* General fieldset properties. */
+form fieldset {
 
     display: flex;
     flex-direction: column;
@@ -38,71 +47,73 @@ fieldset {
     
 }
 
-fieldset>legend {
-    font-size: 12pt;
-    padding: 0 0.25em 0 0.25em;
-}
+/* General form button properties. */
+form button {
 
-fieldset h1 {
-    font-size: 24pt;
-    margin: 0 0 4pt 0;
-}
-
-fieldset p {
-    font-size: 12pt;
-    margin: 0 0 4pt 0;
-}
-
-fieldset input,
-fieldset select {
-    align-self: stretch;
-    margin-bottom: 8pt;
-    font-size: 14pt;
-}
-
-fieldset button {
-
-    margin: 0.1em;
-    padding: 0.3em;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin: 0.1em 0.1em 0.1em 0.1em;
+    padding: 0.3em 1em 0.3em 1em;
 
     font-size: 16pt;
 
-    color: white;
-    background-color: #39f6bd;
-    
     border: 0em;
     border-radius: 0.25em;
 
 }
 
-fieldset button:hover {
-    background-color: #2a9072;
+/* Fieldset properties. */
+form fieldset legend {
+    font-size: 12pt;
+    padding: 0 0.25em 0 0.25em;
 }
 
-fieldset>button {
-    align-self: flex-end;
+form fieldset h1 {
+    font-size: 24pt;
+    margin: 0 0 4pt 0;
 }
 
-fieldset>section {
+form fieldset p {
+    font-size: 12pt;
+    margin: 0 0 4pt 0;
+}
+
+form fieldset input,
+form fieldset select {
+    align-self: stretch;
+    margin-bottom: 8pt;
+    font-size: 14pt;
+}
+
+form fieldset meter {
+    width: 45%;
+}
+
+/* Fieldset section properties. */
+form fieldset>section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 
-    margin: auto;
+    margin: 1em auto 0 auto;
 }
 
-fieldset>section.right-align {
-    margin-right: 0;
-    margin-left: auto;
+form fieldset>section p {
+    margin: 0 0 0 0;
 }
 
-fieldset>section>button {
+form fieldset>section button {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
 
-form>fieldset meter {
-    width: 45%;
+/* Fieldset section classes for alignment. */
+form fieldset>section.right-align {
+    margin-right: 0;
+    margin-left: auto;
 }
+
+form fieldset>section.left-align {
+    margin-right: auto;
+    margin-left: 0;
+}
+

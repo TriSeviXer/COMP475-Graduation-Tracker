@@ -1,0 +1,27 @@
+header {
+    padding: 1em 5vw 1em 5vw;
+    overflow: hidden;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0pt;
+    font-size: 42pt;
+    text-transform: uppercase;
+}
+
+header h2 {
+    margin-top: 0pt;
+    font-size: 28pt;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 32pt;
+    }
+
+    header h2 {
+        font-size: 16pt;
+    }
+}

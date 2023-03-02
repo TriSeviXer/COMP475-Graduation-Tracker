@@ -1,3 +1,9 @@
+/*
+
+    Style sheet for website buttons.
+
+*/
+
 :root {
 
     /* Button Colors for neutral actions. */
@@ -21,7 +27,6 @@ button.neutral {
 }
 
 button.neutral:hover {
-    color: white;
     background-color: var(--btn-neutral-color-selected);
 }
 
@@ -31,8 +36,7 @@ button.positive {
     background-color: var(--btn-positive-color);
 }
 
-button.negative:hover {
-    color: white;
+button.positive:hover {
     background-color: var(--btn-positive-color-selected);
 }
 
@@ -43,6 +47,5 @@ button.negative {
 }
 
 button.negative:hover {
-    color: white;
     background-color: var(--btn-negative-color-selected);
 }
