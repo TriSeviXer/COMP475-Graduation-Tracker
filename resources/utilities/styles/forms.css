@@ -38,7 +38,22 @@ fieldset {
     
 }
 
-fieldset>legend {
+/* General form button properties. */
+form button {
+
+    margin: 0.1em 0.1em 0.1em 0.1em;
+    padding: 0.3em 1em 0.3em 1em;
+
+    font-size: 16pt;
+    text-transform: capitalize;
+
+    border: 0em;
+    border-radius: 0.25em;
+
+}
+
+/* Fieldset properties. */
+form fieldset legend {
     font-size: 12pt;
     padding: 0 0.25em 0 0.25em;
 }

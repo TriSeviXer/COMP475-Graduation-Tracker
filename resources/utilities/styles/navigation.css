@@ -1,0 +1,26 @@
+/*
+
+    Style sheet for website navigation.
+
+*/
+
+nav {
+    margin: 0 0 0 0;
+    padding: 1em 1em 1em 1em;
+    background-color: black;
+}
+
+nav a {
+
+    margin: 0.1em 0.1em 0.1em 0.1em;
+    padding: 0.3em 1em 0.3em 1em;
+
+    font-size: 16pt;
+    text-transform: capitalize;
+
+    border: 0em;
+    border-radius: 0.25em;
+
+    text-decoration: none;
+
+}
