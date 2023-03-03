@@ -54,6 +54,7 @@ form button {
     padding: 0.3em 1em 0.3em 1em;
 
     font-size: 16pt;
+    text-transform: capitalize;
 
     border: 0em;
     border-radius: 0.25em;

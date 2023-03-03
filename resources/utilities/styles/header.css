@@ -1,5 +1,10 @@
 header {
+    
+    display: flex;
+    flex-direction: column;
+
     padding: 1em 5vw 1em 5vw;
+    color: white;
     overflow: hidden;
     text-align: center;
 }
@@ -8,6 +13,7 @@ header h1 {
     margin-bottom: 0pt;
     font-size: 42pt;
     text-transform: uppercase;
+    justify-self: center;
 }
 
 header h2 {

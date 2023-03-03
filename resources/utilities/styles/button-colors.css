@@ -7,11 +7,11 @@
 :root {
 
     /* Button Colors for neutral actions. */
-    --btn-neutral-color: #cdcdcd;
+    --btn-neutral-color: #b7b7b7;
     --btn-neutral-color-selected: #979797;
 
     /* Button colors for positive actions. */
-    --btn-positive-color: #39f6bd;
+    --btn-positive-color: #3bc29a;
     --btn-positive-color-selected: #2a9072;
     
     /* Button colors for negative actions. */
@@ -21,31 +21,37 @@
 }
 
 /* CSS classes for styling neutral buttons. */
-button.neutral {
+button.neutral,
+a.neutral {
     color: white;
     background-color: var(--btn-neutral-color);
 }
 
-button.neutral:hover {
+button.neutral:hover,
+a.neutral:hover {
     background-color: var(--btn-neutral-color-selected);
 }
 
 /* CSS classes for styling positive buttons. */
-button.positive {
+button.positive,
+a.positive {
     color: white;
     background-color: var(--btn-positive-color);
 }
 
-button.positive:hover {
+button.positive:hover,
+a.positive:hover {
     background-color: var(--btn-positive-color-selected);
 }
 
 /* CSS classes for styling negative buttons. */
-button.negative {
+button.negative,
+a.negative {
     color: white;
     background-color: var(--btn-negative-color);
 }
 
-button.negative:hover {
+button.negative:hover,
+a.negative:hover {
     background-color: var(--btn-negative-color-selected);
 }
