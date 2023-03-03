@@ -9,6 +9,7 @@ function prevForm(curr){
 
 }
 
+
 function nextForm(curr, next){
 
     let currForm = document.getElementById(curr);
@@ -20,3 +21,16 @@ function nextForm(curr, next){
     breadCrumbs.push(currForm);
 
 }
+
+
+function nextFieldset(curr, next){
+
+    let currForm = document.getElementsByClassName(curr);
+    currForm.style.display = "none";
+
+    let nextForm = document.getElementsByClassName(next);
+    nextForm.style.display = "";
+
+}
+
+

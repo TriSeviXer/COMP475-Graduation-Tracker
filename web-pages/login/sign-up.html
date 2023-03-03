@@ -11,11 +11,8 @@
             <a class="negative" href="..">Cancel</a>
         </nav>
         <main>
-           
-            <!-- Form for signing up. -->
+            <!-- First form asking for type of signup.-->
             <form action= "../../resources/utilities/includes/signUp.inc.php" >
-                
-                <!-- First field asking for type of signup.-->
                 <fieldset id="f0">
                     <h1>Sign Up</h1>
                     <p>
@@ -23,16 +20,14 @@
                         Please select a signup option.
                     </p>                    
                 
-                    <!-- Form navigation buttons. -->
                     <section>
-                        <button class="positive" type="button" onclick="nextForm('f0', 'f1a')">Use Email</button>
+                        <button type="button" onclick="nextForm('f0', 'f1a')">Use Email</button>
                         <p> OR </p>
-                        <button class="positive" type="button" onclick="nextForm('f0', 'f1b')">Use ID</button>
+                        <button type="button" onclick="nextForm('f0', 'f1b')">Use ID</button>
                     </section>
-
                 </fieldset>
 
-                <!-- Form field signing up with an school email. -->
+            <!-- Form for signing up with an school email. -->
                 <fieldset id="f1a" style="display: none;">
                     
                     <legend>Student Information</legend>
@@ -44,12 +39,12 @@
                     <!-- Form Navigation -->
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f1a')">Back</button>
-                        <button class="positive" type="button" onclick="nextForm('f1a', 'f2a')">Next</button>
+                        <button type="button" onclick="nextForm('f1a', 'f2a')">Next</button>
                     </section>
 
                 </fieldset>
 
-                <!-- Form field signing up with a school id.-->
+            <!-- Form for signing up with a school id.-->
                 <fieldset id="f1b" style="display: none;">
                     
                     <legend>Student Information</legend>
@@ -67,16 +62,18 @@
                     <label>Student ID*</label>
                     <input type="text" name="student id" placeholder="ex. 1234.." size="6" >
 
+                    
+          
                     <!-- Form Navigation -->
                     <section class="right-align" required>
                         <button class="neutral" type="button" onclick="prevForm('f1b')">Back</button>
-                        <button class="positive" type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
+                        <button type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
                     </section>
-
                 </fieldset>
            
 
-                <!-- Second field asking for personal information. -->
+            <!-- Second form asking for personal information. -->
+            
                 <fieldset id="f2a" style="display: none;">
 
                     <legend>Personal Information</legend>
@@ -89,41 +86,38 @@
                     <label>Last Name</label>
                     <input type="text" name="last name" size="32">
 
-                    <!-- Form navigation buttons. -->
+                    
+                
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f2a')">Back</button>
-                        <button class="positive" type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
+                        <button type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
                     </section>
-
                 </fieldset>
 
-                <!-- Third field asking for a password. -->
+            <!-- Third form asking for a password. -->
                 <fieldset id="f3a" style="display: none;">
 
                     <legend>Password</legend>
 
-                    <!-- Ask for a new password. -->
                     <label>Create Password*</label>
                     <input type="password" name="password" size="32" required>
 
-                    <!-- Confirm the password. -->
                     <label>Confirm Password*</label>
                     <input type="password" name="new password" size="32" required>
 
-                    <!-- Verify the password strength. -->
                     <label>Password Strength</label>
                     <meter min="0" max="5" low="1" optimum="3" high="4" value="0"></meter> 
                     
-                    <!-- Form navigation buttons. -->
+                
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
-                        <button class="positive" type="submit" type="submit">Submit</button>
+                        <button type="submit" type="submit">submit</button>
                     </section>
-
                 </fieldset>
-                
             </form>
+    </main>
+        <footer>
 
-        </main>
+        </footer>
     </body>
 </html>
