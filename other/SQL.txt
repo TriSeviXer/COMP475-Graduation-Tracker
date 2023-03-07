@@ -4,6 +4,5 @@ CREATE TABLE users(
     usersFirstName varchar(128) NOT NULL,
     usersLastName varchar(128) NOT NULL,
     usersEmail varchar(128) NOT NULL,
-    usersUsername varchar(128) NOT NULL,
     usersPassword varchar(128) NOT NULL
 );
