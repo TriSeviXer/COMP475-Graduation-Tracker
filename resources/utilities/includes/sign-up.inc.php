@@ -1,22 +1,37 @@
 <?php
 
-echo("<p>h</p>");
+echo("<p>sign-up.inc.php</p>");
 
-/*
-
-
-//did the user actually get here through the submit button
-//stops the user from going into the url and accessing the inc page that way
+//if the user accessed the includes file through the submit button...
 if (isset($_POST['submit'])) {
-  // include_once "DATABASEFILENAME.inc.php";
+
+  echo("<p>Came from submit!</p>");
 
   $firstName = $_POST['firstName'];
-  $lastName = $_POST['lastName'];
-  $email = $_POST['email'];
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  $passwordRepeat = $_POST['passwordRepeat'];
+  echo($firstName);
+  echo("<br>");
 
+  $lastName = $_POST['lastName'];
+  echo($lastName);
+  echo("<br>");
+
+  $email = $_POST['email'];
+  echo($email);
+  echo("<br>");
+
+  $password = $_POST['password'];
+  echo($password);
+  echo("<br>");
+
+  $passwordRepeat = $_POST['confirmedPassword'];
+  echo($passwordRepeat);
+  echo("<br>");
+
+
+}
+//if the user DID NOT access the includes file through the submit button...
+else{
+  echo("<p>did NOT come from submit button submit</p>");
 }
 
 
@@ -30,51 +45,52 @@ if (isset($_POST['submit'])) {
 
 
   require_once 'databaseHandler.inc.php';
-  require_once 'functions.inc.php';
+  //require_once 'functions.inc.php';
 
 
 
 
 //error handling to make sure none of the fields are empty
-  if (areThereEmptyFields($firstName, $lastName, $email, $username, $password, $passwordRepeat)) {
+  if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)) {
     //sends the user back to Sign up page
-    header("Location: signUp.html?signup=empty");
+    header("location: ../../../web-pages/login/sign-up.html?signup=empty");
     exit(); 
   }
+
+
   //invalid username
     //invalid email
     //make sure the passwords match 
     //username already exists
     //password strength?
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-      header("Location: login.html?signup=invalidemail");
+      header("location: ../../../web-pages/login/sign-up.html?signup=invalidemail");
       exit();
   }
   else{
       //sign up the user
-      createUser($conn, $firstName, $lastName, $email, $username, $password);
+      createUser($conn, $firstName, $lastName, $email, $password);
   }
-}
-else{
-  header("Location: login.html?signup=error");
-}
 
-function areThereEmptyFields($firstName, $lastName, $email, $username, $password, $passwordRepeat){
+
+function areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat){
 
   //if any of the input fields are empty retrun true
-  if (empty($firstName) || empty($lastName) || empty($email) || empty($username) || empty($password)){
+  if (empty($firstName) || empty($lastName) || empty($email) || empty($password)){
     return true;
   }
     //if none of the fields are empty return false
     return false;
 }
 
+/*
 function areThereInvalidCharachters(){
   if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
     return true;
   }
   return false;
 }
+*/
 
 function isEmailInvalid($email){
   if (filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -91,6 +107,7 @@ function arePasswordsDifferent($password, $passwordRepeat){
   return false;
 } 
 
+/*
 function doesUsernameAlreadyExist($conn, $username, $email){
   //question mark is a placeholder for username
   //prevents sql injection by sending sql statement to database first
@@ -109,7 +126,7 @@ function doesUsernameAlreadyExist($conn, $username, $email){
   }
 
   //bind the statement with username and password input(statement, datatypes, data, data)
-  mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+  mysqli_stmt_bind_param($stmt, "s", $email);
   //execute the sql statement with username and passwordr
   mysqli_stmt_execute($stmt);
 
@@ -129,13 +146,14 @@ function doesUsernameAlreadyExist($conn, $username, $email){
   //closes the prepared statement
   mysqli_stmt_close($stmt);
 }
+*/
 
 
-function $createUser($conn, $firstName, $lastName, $email, $username, $password){
+function createUser($conn, $firstName, $lastName, $email, $password){
   //question mark is a placeholder for username
   //prevents sql injection by sending sql statement to database first
   //then fills in placeholders
-  $sql = "INSERT INTO users (usersFirstName, usersLastName, usersEmail, usersUsername, usersPassword) VALUES (?,?,?,?,?);";
+  $sql = "INSERT INTO users (usersFirstName, usersLastName, usersEmail, usersPassword) VALUES (?,?,?,?);";
 
 
   $stmt = mysqli_stmt_init($conn);
@@ -144,15 +162,15 @@ function $createUser($conn, $firstName, $lastName, $email, $username, $password)
   //if statement cannot be prepared with database connection
   if (!mysqli_stmt_prepare($stmt, $sql)){
     //error
-    header("location: ../signUp.php?error=preparedStatementFailed");
+    header("location: ../../../web-pages/login/sign-up.html?error=preparedStatementFailed");
     exit();
   }
 
   //hashes/encrypts password to keep it secure and unreadable in database
-  $hashedPassword = password_hash($password, PASSWORD_DEFAULT)
+  //$hashedPassword = password_hash($password, PASSWORD_DEFAULT)
 
   //bind the statement with username and password input(statement, datatypes, data, data)
-  mysqli_stmt_bind_param($stmt, "sssss", $firstName, $lastName, $email, $username, $password);
+  mysqli_stmt_bind_param($stmt, "ssss", $firstName, $lastName, $email, $password);
   //execute the sql statement with username and passwordr
   mysqli_stmt_execute($stmt);
 
@@ -160,7 +178,6 @@ function $createUser($conn, $firstName, $lastName, $email, $username, $password)
   mysqli_stmt_close($stmt);
 
   //send user back to homepage after signing uo
-  header("location: ../signUp.php?error=none");
-
+  header("location: ../../../web-pages/login/sign-up.html?error=none");
 }
-*/
+
