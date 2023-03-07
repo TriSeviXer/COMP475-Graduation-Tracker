@@ -1,3 +1,9 @@
+/*
+
+    Style sheet for website forms.
+
+*/
+
 :root {
 
     --frm-form-color: #FFFFFF;
@@ -24,7 +30,7 @@ form {
 
 }
 
-fieldset {
+form fieldset {
 
     display: flex;
     flex-direction: column;
@@ -58,64 +64,68 @@ form fieldset legend {
     padding: 0 0.25em 0 0.25em;
 }
 
-fieldset h1 {
+form fieldset h1 {
     font-size: 24pt;
     margin: 0 0 4pt 0;
 }
 
-fieldset p {
+form fieldset p {
     font-size: 12pt;
     margin: 0 0 4pt 0;
 }
 
-fieldset input,
-fieldset select {
+/*
+    Input elements span the fieldset by default.
+*/
+form fieldset>input,
+form fieldset>select {
     align-self: stretch;
     margin-bottom: 8pt;
     font-size: 14pt;
 }
 
-fieldset button {
-
-    margin: 0.1em;
-    padding: 0.3em;
-    padding-left: 1em;
-    padding-right: 1em;
-
-    font-size: 16pt;
-
-    color: white;
-    background-color: #39f6bd;
-    
-    border: 0em;
-    border-radius: 0.25em;
-
-}
-
-fieldset button:hover {
-    background-color: #2a9072;
-}
-
-fieldset>button {
-    align-self: flex-end;
-}
-
-fieldset>section {
+/*
+    Section layout in a fieldset. Default center align items.
+*/
+form fieldset>section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 
-    margin: auto;
+    margin: 1em auto 0 auto;
 }
 
-fieldset>section.right-align {
+/*
+    Button spacing in a fieldset section.
+*/
+form fieldset>section>button {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+/* 
+    Paragraph spacing in a fieldset section.
+*/
+form fieldset>section>p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*
+    Class for right aligning items in a section.
+*/
+form fieldset>section.right-align {
     margin-right: 0;
     margin-left: auto;
 }
 
-fieldset>section>button {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+/*
+    Class for right aligning items in a section.
+*/
+form fieldset>section.left-align {
+    margin-left: 0;
+    margin-right: auto;
 }
 
 form>fieldset meter {

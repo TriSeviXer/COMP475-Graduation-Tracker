@@ -1,5 +1,7 @@
 @import url("button-colors.css");
 @import url("forms.css");
+@import url("header.css");
+@import url("navigation.css");
 
 body {
     margin: 0 0 0 0;
@@ -8,28 +10,35 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img {
-    width: 100%;
-}
+img.logo {
 
-header {
-    text-align: center;
-    color: white;
-}
-
-header>h1 {
-    margin-bottom: 0pt;
-    font-size: 32pt;
-    text-transform: uppercase;
-}
-
-header>h2 {
-    margin-top: 0pt;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< Updated upstream
     min-height: 90vh;
+=======
+    min-height: 50vh;
+	max-height: 80vh;
+}
+
+/* Home page formatting */
+
+.gradtrackInfo
+{
+	margin: 5px 5px 5px 5px;
+	font-size: 24pt;
+	color: white;    
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align:center;
+	font-weight: 500;
+}
+
+.about-main
+{
+	max-width: 100vh
+>>>>>>> Stashed changes
 }

@@ -8,7 +8,10 @@
     </head>
     <body>
         <nav>
-            <a class="negative" href="..">Cancel</a>
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="login.html">Login</a>
+			<a href="sign-up.html">Sign-up</a>
         </nav>
         <main>
             <!-- First form asking for type of signup.-->
@@ -20,11 +23,13 @@
                         Please select a signup option.
                     </p>                    
                 
+                    <!-- Form Navigation -->
                     <section>
-                        <button type="button" onclick="nextForm('f0', 'f1a')">Use Email</button>
+                        <button class="positive" type="button" onclick="nextForm('f0', 'f1a')">Use Email</button>
                         <p> OR </p>
-                        <button type="button" onclick="nextForm('f0', 'f1b')">Use ID</button>
+                        <button class="positive" type="button" onclick="nextForm('f0', 'f1b')">Use ID</button>
                     </section>
+
                 </fieldset>
 
             <!-- Form for signing up with an school email. -->
@@ -39,7 +44,7 @@
                     <!-- Form Navigation -->
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f1a')">Back</button>
-                        <button type="button" onclick="nextForm('f1a', 'f2a')">Next</button>
+                        <button class="positive" type="button" onclick="nextForm('f1a', 'f2a')">Next</button>
                     </section>
 
                 </fieldset>
@@ -67,7 +72,7 @@
                     <!-- Form Navigation -->
                     <section class="right-align" required>
                         <button class="neutral" type="button" onclick="prevForm('f1b')">Back</button>
-                        <button type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
+                        <button class="positive" type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
                     </section>
                 </fieldset>
            
@@ -90,7 +95,7 @@
                 
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f2a')">Back</button>
-                        <button type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
+                        <button class="positive" type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
                     </section>
                 </fieldset>
 
@@ -111,7 +116,7 @@
                 
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
-                        <button type="submit" type="submit">submit</button>
+                        <button class="positive" type="submit" type="submit">submit</button>
                     </section>
                 </fieldset>
             </form>
