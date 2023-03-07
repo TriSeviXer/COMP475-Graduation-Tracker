@@ -44,7 +44,7 @@ else{
 
 
 
-  require_once 'databaseHandler.inc.php';
+  require_once 'database-handler.inc.php';
   //require_once 'functions.inc.php';
 
 
