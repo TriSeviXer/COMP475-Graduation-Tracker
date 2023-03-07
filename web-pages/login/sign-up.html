@@ -11,11 +11,14 @@
             <a href="../index.html">Home</a>
             <a href="../about.html">About</a>
             <a href="login.html">Login</a>
-			<a href="sign-up.html">Sign-up</a>
+			<a class="positive" href="sign-up.html">Sign-up</a>
         </nav>
         <main>
-            <!-- First form asking for type of signup.-->
+
+            <!-- Form for creating a new account. -->
             <form action= "../../resources/utilities/includes/signUp.inc.php" >
+
+                <!-- First form asking for type of signup.-->
                 <fieldset id="f0">
                     <h1>Sign Up</h1>
                     <p>
@@ -32,7 +35,7 @@
 
                 </fieldset>
 
-            <!-- Form for signing up with an school email. -->
+                <!-- For signing up with an school email. -->
                 <fieldset id="f1a" style="display: none;">
                     
                     <legend>Student Information</legend>
@@ -49,7 +52,7 @@
 
                 </fieldset>
 
-            <!-- Form for signing up with a school id.-->
+                <!-- For signing up with a school id.-->
                 <fieldset id="f1b" style="display: none;">
                     
                     <legend>Student Information</legend>
@@ -66,19 +69,17 @@
                     <!-- Ask for student id. -->
                     <label>Student ID*</label>
                     <input type="text" name="student id" placeholder="ex. 1234.." size="6" >
-
-                    
           
                     <!-- Form Navigation -->
                     <section class="right-align" required>
                         <button class="neutral" type="button" onclick="prevForm('f1b')">Back</button>
                         <button class="positive" type="button" onclick="nextForm('f1b', 'f2a')">Next</button>
                     </section>
+
                 </fieldset>
            
 
-            <!-- Second form asking for personal information. -->
-            
+                <!-- Second form asking for personal information. -->
                 <fieldset id="f2a" style="display: none;">
 
                     <legend>Personal Information</legend>
@@ -91,36 +92,41 @@
                     <label>Last Name</label>
                     <input type="text" name="last name" size="32">
 
-                    
-                
+                    <!-- Form Navigation -->
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f2a')">Back</button>
                         <button class="positive" type="button" onclick="nextForm('f2a', 'f3a')">Next</button>
                     </section>
+
                 </fieldset>
 
-            <!-- Third form asking for a password. -->
+                <!-- Third form asking for a password. -->
                 <fieldset id="f3a" style="display: none;">
 
                     <legend>Password</legend>
 
+                    <!-- Ask for a new password. -->
                     <label>Create Password*</label>
                     <input type="password" name="password" size="32" required>
 
+                    <!-- Confirm new password. -->
                     <label>Confirm Password*</label>
                     <input type="password" name="new password" size="32" required>
 
+                    <!-- Password strength check. -->
                     <label>Password Strength</label>
                     <meter min="0" max="5" low="1" optimum="3" high="4" value="0"></meter> 
                     
-                
+                    <!-- Form Navigation -->
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
                         <button class="positive" type="submit" type="submit">submit</button>
                     </section>
+
                 </fieldset>
             </form>
-    </main>
+
+        </main>
         <footer>
 
         </footer>
