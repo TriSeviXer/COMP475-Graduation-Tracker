@@ -4,7 +4,7 @@
 body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    background-color: #f63939;
+    background-color: #990F02;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -31,5 +31,27 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 50vh;
+	max-height: 80vh;
+}
+
+/* Home page formatting */
+
+.gradtrackInfo
+{
+	margin: 5px 5px 5px 5px;
+	font-size: 24pt;
+	color: white;    
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align:center;
+	font-weight: 500;
+}
+
+nav
+{
+	font-size: 14pt;
+}
+.about-main
+{
+	max-width: 100vh
 }
