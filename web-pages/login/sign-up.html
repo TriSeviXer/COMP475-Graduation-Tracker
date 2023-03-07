@@ -16,7 +16,7 @@
         <main>
 
             <!-- Form for creating a new account. -->
-            <form action= "../../resources/utilities/includes/signUp.inc.php" >
+            <form action="../../resources/utilities/includes/sign-up.inc.php" method="post">
 
                 <!-- First form asking for type of signup.-->
                 <fieldset id="f0">
@@ -42,7 +42,7 @@
                     
                     <!-- Ask for a school email address. -->
                     <label>Email Address*</label>
-                    <input type="email" name="email address" placeholder="username@school.edu" size="32" > 
+                    <input type="email" name="email" placeholder="username@school.edu" size="32"> 
                     
                     <!-- Form Navigation -->
                     <section class="right-align">
@@ -59,7 +59,7 @@
 
                     <!-- Ask for campus for the student id. -->
                     <label>Campus*</label>
-                    <select name="campus" >
+                    <select name="campus">
                         <option value="">Select an option...</option>
                         <option value="bloomsburg">Bloomsburg</option>
                         <option value="lock haven">Lock Haven</option>
@@ -68,7 +68,7 @@
                     
                     <!-- Ask for student id. -->
                     <label>Student ID*</label>
-                    <input type="text" name="student id" placeholder="ex. 1234.." size="6" >
+                    <input type="text" name="studentID" placeholder="ex. 1234.." size="6" >
           
                     <!-- Form Navigation -->
                     <section class="right-align" required>
@@ -111,7 +111,7 @@
 
                     <!-- Confirm new password. -->
                     <label>Confirm Password*</label>
-                    <input type="password" name="new password" size="32" required>
+                    <input type="password" name="confirmedPassword" size="32" required>
 
                     <!-- Password strength check. -->
                     <label>Password Strength</label>
@@ -120,7 +120,7 @@
                     <!-- Form Navigation -->
                     <section class="right-align">
                         <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
-                        <button class="positive" type="submit" type="submit">submit</button>
+                        <button class="positive" type="submit" name="submit">submit</button>
                     </section>
 
                 </fieldset>

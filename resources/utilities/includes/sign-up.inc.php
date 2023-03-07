@@ -11,11 +11,14 @@ if (isset($_POST['submit'])) {
 }
 //if the user DID NOT access the includes file through the submit button...
 else {
+  
   header("location: ../../../web-pages/login/sign-up.html?error=didNotComeFromSubmit");
 }
 
 require_once 'database-handler.inc.php';
 //require_once 'functions.inc.php';
+
+
 
 //error handling to make sure none of the fields are empty
 if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)) {
@@ -23,6 +26,8 @@ if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepea
   header("location: ../../../web-pages/login/sign-up.html?signup=empty");
   exit();
 }
+
+
 
 //invalid username
 //invalid email
@@ -50,7 +55,7 @@ function areThereEmptyFields($firstName, $lastName, $email, $password, $password
 {
 
   //if any of the input fields are empty retrun true
-  if (empty($firstName) || empty($lastName) || empty($email) || empty($password)) {
+  if (empty($firstName) || empty($lastName) || empty($email) || empty($password || empty($passwordRepeat))) {
     return true;
   }
   //if none of the fields are empty return false
@@ -82,7 +87,7 @@ function arePasswordsDifferent($password, $passwordRepeat)
   return false;
 }
 
-/*
+
 function doesUsernameAlreadyExist($conn, $username, $email){
   //question mark is a placeholder for username
   //prevents sql injection by sending sql statement to database first
@@ -121,7 +126,7 @@ function doesUsernameAlreadyExist($conn, $username, $email){
   //closes the prepared statement
   mysqli_stmt_close($stmt);
 }
-*/
+
 
 
 function createUser($conn, $firstName, $lastName, $email, $password)
