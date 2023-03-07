@@ -1,9 +1,16 @@
+/*
+
+    Style sheet for website headers.
+
+*/
 header {
     
     display: flex;
     flex-direction: column;
 
-    padding: 1em 5vw 1em 5vw;
+    padding: 1em auto 1em auto;
+    margin: 0 0 0 0;
+
     color: white;
     overflow: hidden;
     text-align: center;

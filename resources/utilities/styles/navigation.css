@@ -7,6 +7,10 @@
 nav {
     margin: 0 0 0 0;
     padding: 1em 1em 1em 1em;
+
+    font-size: 16pt;
+    
+    color: white;
     background-color: black;
 }
 
@@ -15,12 +19,15 @@ nav a {
     margin: 0.1em 0.1em 0.1em 0.1em;
     padding: 0.3em 1em 0.3em 1em;
 
-    font-size: 16pt;
+    text-decoration: none;
     text-transform: capitalize;
 
-    border: 0em;
+    color: inherit;
     border-radius: 0.25em;
 
-    text-decoration: none;
+}
 
+nav a:hover {
+
+    background-color: #202020;
 }
