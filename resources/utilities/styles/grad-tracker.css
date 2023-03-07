@@ -6,23 +6,24 @@
 body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    background-color: #f63939;
+    background-color: #990F02;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img.logo {
-
+    z-index: -10;
+    margin: 0 auto 0 auto;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< Updated upstream
-    min-height: 90vh;
-=======
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
     min-height: 50vh;
-	max-height: 80vh;
 }
 
 /* Home page formatting */
@@ -40,5 +41,4 @@ main {
 .about-main
 {
 	max-width: 100vh
->>>>>>> Stashed changes
 }
