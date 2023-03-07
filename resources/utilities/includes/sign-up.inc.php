@@ -1,37 +1,40 @@
 <?php
 
-echo("<p>sign-up.inc.php</p>");
-
 //if the user accessed the includes file through the submit button...
 if (isset($_POST['submit'])) {
 
-  echo("<p>Came from submit!</p>");
-
   $firstName = $_POST['firstName'];
-  echo($firstName);
-  echo("<br>");
-
   $lastName = $_POST['lastName'];
-  echo($lastName);
-  echo("<br>");
-
   $email = $_POST['email'];
-  echo($email);
-  echo("<br>");
-
   $password = $_POST['password'];
-  echo($password);
-  echo("<br>");
-
   $passwordRepeat = $_POST['confirmedPassword'];
-  echo($passwordRepeat);
-  echo("<br>");
-
-
 }
 //if the user DID NOT access the includes file through the submit button...
-else{
-  echo("<p>did NOT come from submit button submit</p>");
+else {
+  header("location: ../../../web-pages/login/sign-up.html?error=didNotComeFromSubmit");
+}
+
+require_once 'database-handler.inc.php';
+//require_once 'functions.inc.php';
+
+//error handling to make sure none of the fields are empty
+if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)) {
+  //sends the user back to Sign up page
+  header("location: ../../../web-pages/login/sign-up.html?signup=empty");
+  exit();
+}
+
+//invalid username
+//invalid email
+//make sure the passwords match 
+//username already exists
+//password strength?
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  header("location: ../../../web-pages/login/sign-up.html?signup=invalidemail");
+  exit();
+} else {
+  //sign up the user
+  createUser($conn, $firstName, $lastName, $email, $password);
 }
 
 
@@ -40,47 +43,18 @@ else{
 
 
 
-  
 
 
 
-  require_once 'databaseHandler.inc.php';
-  //require_once 'functions.inc.php';
-
-
-
-
-//error handling to make sure none of the fields are empty
-  if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)) {
-    //sends the user back to Sign up page
-    header("location: ../../../web-pages/login/sign-up.html?signup=empty");
-    exit(); 
-  }
-
-
-  //invalid username
-    //invalid email
-    //make sure the passwords match 
-    //username already exists
-    //password strength?
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-      header("location: ../../../web-pages/login/sign-up.html?signup=invalidemail");
-      exit();
-  }
-  else{
-      //sign up the user
-      createUser($conn, $firstName, $lastName, $email, $password);
-  }
-
-
-function areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat){
+function areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)
+{
 
   //if any of the input fields are empty retrun true
-  if (empty($firstName) || empty($lastName) || empty($email) || empty($password)){
+  if (empty($firstName) || empty($lastName) || empty($email) || empty($password)) {
     return true;
   }
-    //if none of the fields are empty return false
-    return false;
+  //if none of the fields are empty return false
+  return false;
 }
 
 /*
@@ -92,20 +66,21 @@ function areThereInvalidCharachters(){
 }
 */
 
-function isEmailInvalid($email){
-  if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+function isEmailInvalid($email)
+{
+  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     return true;
   }
   return false;
-
 }
 
-function arePasswordsDifferent($password, $passwordRepeat){
-  if ($password != $passwordRepeat){
+function arePasswordsDifferent($password, $passwordRepeat)
+{
+  if ($password != $passwordRepeat) {
     return true;
   }
   return false;
-} 
+}
 
 /*
 function doesUsernameAlreadyExist($conn, $username, $email){
@@ -149,7 +124,8 @@ function doesUsernameAlreadyExist($conn, $username, $email){
 */
 
 
-function createUser($conn, $firstName, $lastName, $email, $password){
+function createUser($conn, $firstName, $lastName, $email, $password)
+{
   //question mark is a placeholder for username
   //prevents sql injection by sending sql statement to database first
   //then fills in placeholders
@@ -160,7 +136,7 @@ function createUser($conn, $firstName, $lastName, $email, $password){
 
   //check for errors
   //if statement cannot be prepared with database connection
-  if (!mysqli_stmt_prepare($stmt, $sql)){
+  if (!mysqli_stmt_prepare($stmt, $sql)) {
     //error
     header("location: ../../../web-pages/login/sign-up.html?error=preparedStatementFailed");
     exit();
@@ -180,4 +156,3 @@ function createUser($conn, $firstName, $lastName, $email, $password){
   //send user back to homepage after signing uo
   header("location: ../../../web-pages/login/sign-up.html?error=none");
 }
-
