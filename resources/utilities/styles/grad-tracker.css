@@ -2,6 +2,7 @@
 @import url("forms.css");
 @import url("header.css");
 @import url("navigation.css");
+@import url("selection-table.css");
 
 body {
     margin: 0 0 0 0;
@@ -26,6 +27,16 @@ main {
     min-height: 50vh;
 }
 
+main.selection {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
 /* Home page formatting */
 
 .gradtrackInfo
@@ -39,5 +50,5 @@ main {
 
 .about-main
 {
-	max-width: 100vh
+	max-width: 100vh;
 }
