@@ -14,7 +14,8 @@
 
 form {
 
-    padding: 1em;
+    margin-top: 1em;
+    padding: 1em 1em 1em 1em;
     
     background-color: var(--frm-form-color);
 
@@ -75,6 +76,7 @@ form fieldset h1 {
     font-size: 24pt;
     font-weight: bold;
     margin: 0 0 4pt 0;
+    text-transform: uppercase;
 }
 
 form fieldset p {
