@@ -15,6 +15,11 @@
     
 }
 
+/* Buttons and input inherit font from body. */
+button, input {
+    font-family: inherit;
+}
+
 /* CSS classes for styling neutral buttons. */
 button.neutral,
 a.neutral {

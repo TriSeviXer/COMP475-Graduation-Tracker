@@ -51,7 +51,7 @@
 }
 
 .course-heading:hover {
-    background-color: #f6f6f6;
+    background-color: #dadada;
 }
 
 .course-heading button:first-child {
@@ -76,7 +76,7 @@
     margin-block: 0 0;
     padding: 0.5em;
     
-    background-color: white;
+    background-color: whitesmoke;
 
     border-bottom-left-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
@@ -96,6 +96,7 @@
 }
 
 .course-dropdown-heading {
+    background-color: #dadada;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }

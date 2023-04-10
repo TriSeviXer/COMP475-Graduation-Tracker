@@ -9,7 +9,6 @@ function prevForm(curr){
 
 }
 
-
 function nextForm(curr, next){
 
     let currForm = document.getElementById(curr);
@@ -22,7 +21,6 @@ function nextForm(curr, next){
 
 }
 
-
 function nextFieldset(curr, next){
 
     let currForm = document.getElementsByClassName(curr);
@@ -33,9 +31,8 @@ function nextFieldset(curr, next){
 
 }
 
-function toggleDropdown(head, content){
-    document.getElementById(content).classList.toggle("course-dropdown-content");
-    document.getElementById(head).classList.toggle("course-dropdown-heading");
+function toggleContent(id){
+    let parent = document.getElementById(id);
+    parent.firstElementChild.classList.toggle("course-dropdown-heading");
+    parent.lastElementChild.classList.toggle("course-dropdown-content");
 }
-
-
