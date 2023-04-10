@@ -14,7 +14,7 @@
 			<a class="positive" href="sign-up.php">Sign-up</a>
         </nav>
         <main>
-            <form>
+            <form action="../../resources/utilities/includes/login.inc.php" method="post">
                 <fieldset>
 
                     <h1>Student Login</h1>
@@ -32,10 +32,25 @@
 
                     <!-- Confirmation to log into the system. -->
                     <section class="right-align">
-                        <button class="positive" type="submit">Login</button>
+                        <button class="positive" type="submit" name="submit">Login</button>
                     </section>
 
                 </fieldset>
+                <?php
+                //error handling for sign-up
+
+                    //read the url
+                    //if "sign-up" is after ?...
+                    if (isset($_GET["login"])) {
+                        //if "sign-up" = "emptyInput"
+                        if ($_GET["login"] == "emptyInput"){
+                            echo "<p>Fill in all fields!</p>";
+                        }
+                        else if ($_GET["login"] == "incorrectLogin"){
+                            echo "<p>Incorrect Email or Password!</p>";
+                        }
+                    }
+                ?>
             </form>
         </main>
     </body>

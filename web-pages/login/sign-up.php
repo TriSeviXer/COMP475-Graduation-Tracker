@@ -16,6 +16,7 @@
         <main>
 
             <!-- Form for creating a new account. -->
+            <!-- Post method allows for secure data transfer through the form -->
             <form action="../../resources/utilities/includes/sign-up.inc.php" method="post">
 
                 <!-- First form asking for type of signup.-->
@@ -42,7 +43,7 @@
                     
                     <!-- Ask for a school email address. -->
                     <label>Email Address*</label>
-                    <input type="email" name="email" placeholder="username@school.edu" size="32"> 
+                    <input type="text" name="email" placeholder="username@school.edu" size="32"> 
                     
                     <!-- Form Navigation -->
                     <section class="right-align">
@@ -122,9 +123,47 @@
                         <button class="neutral" type="button" onclick="prevForm('f3a')">Back</button>
                         <button class="positive" type="submit" name="submit">submit</button>
                     </section>
-
                 </fieldset>
+
+                <?php
+                //error handling for sign-up
+
+                    //read the url
+                    //if "sign-up" is after ?...
+                    if (isset($_GET["sign-up"])) {
+                        //if "sign-up" = "emptyInput"
+                        if ($_GET["sign-up"] == "emptyInput"){
+                            echo "<p>Fill in all fields!</p>";
+                        }
+                        else if ($_GET["sign-up"] == "invalidEmail"){
+                            echo "<p>Invalid Email Address!</p>";
+                        }
+                        else if ($_GET["sign-up"] == "emailIsTaken"){
+                            echo "<p>Email is already taken!</p>";
+                        }
+                        else if ($_GET["sign-up"] == "passwordsDoNotMatch"){
+                            echo "<p>PasswordsDoNotMatch</p>";
+                        }
+                        else if ($_GET["sign-up"] == "emptyInput"){
+                            echo "<p>Fill in all fields!</p>";
+                        }
+                    }
+                    //if "error" is after ?...
+                    else if (isset($_GET["error"])){
+                        //if "error" = "stmt"
+                        if ($_GET["error"] == "preparedStatementFailed"){
+                            echo "<p>Error! Please try again!</p>";
+                        }
+                        //if "error" = "stmt"
+                        if ($_GET["error"] == "didNotComeFromSubmit"){
+                            echo "<p>Please continue Correctly!!</p>";
+                        }
+                    }
+                ?>
+                
             </form>
+
+            
 
         </main>
         <footer>

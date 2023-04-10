@@ -4,15 +4,11 @@
         <meta charset="UTF-8">
         <title>Graduation Tracker</title>
         <link rel="Stylesheet" type="text/css" href="../resources/utilities/styles/grad-tracker.css">
-        <script src="../resources/utilities/scripts/grad-script.js" defer></script>
     </head>
     <body>
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="login/login.php">Login</a>
-            <a class="positive" href="login/sign-up.php">Sign-up</a>
-        </nav>
+        <?php
+            include '../resources/utilities/includes/navigation.inc.php';
+        ?>
         <header>
             <h1>Commonwealth University Graduation Tracker</h1>
             <h2>Your future begins here!</h2>
