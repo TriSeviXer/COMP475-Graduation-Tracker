@@ -117,102 +117,59 @@
 
                 </fieldset>
             </form>
-            <table>
-                <caption>Course Selection</caption>
-                <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>COMP100</td>
-                        <td>Computers </td>
-                        <td><button class="positive">Add</button></td>
-                    </tr>
-                    <tr>
-                        <td>COMP101</td>
-                        <td>Intro To Computers</td>
-                        <td><button class="positive">Add</button></td>
-                    </tr>
-                    <tr>
-                        <td>COMP100</td>
-                        <td>Computers </td>
-                        <td><button class="positive">Add</button></td>
-                    </tr>
-                    <tr>
-                        <td>COMP100</td>
-                        <td>Computers </td>
-                        <td><button class="positive">Add</button></td>
-                    </tr>
-                    <tr>
-                        <td>COMP100</td>
-                        <td>Computers </td>
-                        <td><button class="positive">Add</button></td>
-                    </tr>
-                </tbody>
-            </table>
             <div class="container">
-                <form>
-                    <h1>Schedules</h1>
-                    <fieldset>
-                        <label>Semester Name</label>
-                        <input type="text">
-                        <section class="right-align">
-                            <button class="positive">Add</button>
-                        </section>
-                        
-                    </fieldset>
-                </form>
-                <table>
-                    <caption>FALL 2024</caption>
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>COMP100</td>
-                            <td>Computers </td>
-                            <td><button class="negative">Remove</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table>
-                    <caption>SPRING 2025</caption>
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>COMP100</td>
-                            <td>Computers </td>
-                            <td><button class="negative">Remove</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table>
-                    <caption>FALL 2025</caption>
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>COMP100</td>
-                            <td>Computers </td>
-                            <td><button class="negative">Remove</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h1>Course List</h1>
+                <div id="comp100" class="course">
+                    <div id="comp100-head" class="course-heading">
+                        <button onclick="toggleDropdown('comp100-head', 'comp100-content')">COMP100 Intro to Computers</button>
+                        <button class="positive">Add</button>
+                    </div>
+                    <div id="comp100-content" class="course-dropdown">
+                        <h1>Course Description</h1>
+                        <p id="descritpion">Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p id="prerequisites">None</p>
+                    </div>
+                </div>
+                <div id="comp100" class="course">
+                    <div id="comp100-head" class="course-heading">
+                        <button onclick="toggleDropdown('comp100-head', 'comp100-content')">COMP100 Intro to Computers</button>
+                        <button class="positive">Add</button>
+                    </div>
+                    <div id="comp100-content" class="course-dropdown">
+                        <h1>Course Description</h1>
+                        <p id="descritpion">Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p id="prerequisites">None</p>
+                    </div>
+                </div>
+                <div id="comp100" class="course">
+                    <div id="comp100-head" class="course-heading">
+                        <button onclick="toggleDropdown('comp100-head', 'comp100-content')">COMP100 Intro to Computers</button>
+                        <button class="positive">Add</button>
+                    </div>
+                    <div id="comp100-content" class="course-dropdown">
+                        <h1>Course Description</h1>
+                        <p id="descritpion">Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p id="prerequisites">None</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Schedule</h1>
+                <div id="comp100" class="course">
+                    <div id="comp100-head" class="course-heading">
+                        <button onclick="toggleDropdown('comp100-head', 'comp100-content')">COMP100 Intro to Computers</button>
+                        <button class="positive">Add</button>
+                    </div>
+                    <div id="comp100-content" class="course-dropdown">
+                        <h1>Course Description</h1>
+                        <p id="descritpion">Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p id="prerequisites">None</p>
+                    </div>
+                </div>
             </div>
             
         </main>

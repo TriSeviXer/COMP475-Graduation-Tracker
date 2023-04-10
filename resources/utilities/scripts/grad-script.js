@@ -33,4 +33,9 @@ function nextFieldset(curr, next){
 
 }
 
+function toggleDropdown(head, content){
+    document.getElementById(content).classList.toggle("course-dropdown-content");
+    document.getElementById(head).classList.toggle("course-dropdown-heading");
+}
+
 
