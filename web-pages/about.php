@@ -13,9 +13,9 @@
 			<a href="login/login.php">Login</a>
 			<a class="positive" href="login/sign-up.php">Sign-up</a>
         </nav>
-		<header>
-		    <h1>About</h1>
-		</header>
+        <header>
+    	    <h1>About</h1>
+        </header>
         <main>
             <div class = "about-main">
                 <div class = "gradtrackInfo">			
@@ -27,7 +27,7 @@
                     </p>
                 </div>
             </div>
-		</main>
+        </main>
         <footer>
 
         </footer>

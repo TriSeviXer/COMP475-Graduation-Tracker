@@ -14,14 +14,14 @@
 
 form {
 
-    margin: auto;
-    padding: 1em;
+    margin-top: 1em;
+    padding: 1em 1em 1em 1em;
     
     background-color: var(--frm-form-color);
 
     min-width: auto;
-    width: 35em;
-    max-width: 40em;
+    width: 100vw;
+    max-width: 30em;
 
     border-radius: 0.4em;
     border-width: 0;
@@ -37,11 +37,9 @@ form fieldset {
     align-items: flex-start;
 
     margin: 1em auto 1em auto;
+
     border: 0.15em dotted var(--frm-fieldset-border-color);
     border-radius: 0.5em;
-
-    width: 60%;
-    
 }
 
 /* General form button properties. */
@@ -58,15 +56,27 @@ form button {
 
 }
 
+form>h1 {
+    margin: 0 0 0 0;
+    font-size: 24pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 /* Fieldset properties. */
 form fieldset legend {
-    font-size: 12pt;
     padding: 0 0.25em 0 0.25em;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 form fieldset h1 {
     font-size: 24pt;
+    font-weight: bold;
     margin: 0 0 4pt 0;
+    text-transform: uppercase;
 }
 
 form fieldset p {
@@ -93,7 +103,7 @@ form fieldset>section {
     flex-wrap: wrap;
     align-items: center;
 
-    margin: 1em auto 0 auto;
+    margin: 0.5em auto 0.25em auto;
 }
 
 /*
