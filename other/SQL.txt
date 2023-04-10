@@ -6,3 +6,6 @@ CREATE TABLE users(
     usersEmail varchar(128) NOT NULL,
     usersPassword varchar(128) NOT NULL
 );
+
+//select usersEmail
+"SELECT * FROM users WHERE userEmail = ?;"

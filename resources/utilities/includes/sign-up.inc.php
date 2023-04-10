@@ -12,22 +12,20 @@ if (isset($_POST['submit'])) {
 //if the user DID NOT access the includes file through the submit button...
 else {
   
-  header("location: ../../../web-pages/login/sign-up.html?error=didNotComeFromSubmit");
+  header("location: /COMP475-Graduation-Tracker/web-pages/login/sign-up.php?error=didNotComeFromSubmit");
 }
 
+//includes
 require_once 'database-handler.inc.php';
-//require_once 'functions.inc.php';
-
+require_once 'login-sign-up-functions.inc.php';
 
 
 //error handling to make sure none of the fields are empty
-if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)) {
+if (areThereEmptyFieldsSignUp($firstName, $lastName, $email, $password, $passwordRepeat)) {
   //sends the user back to Sign up page
-  header("location: ../../../web-pages/login/sign-up.html?signup=empty");
+  header("location: /COMP475-Graduation-Tracker/web-pages/login/sign-up.php?sign-up=emptyInput");
   exit();
 }
-
-
 
 //invalid username
 //invalid email
@@ -35,129 +33,25 @@ if (areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepea
 //username already exists
 //password strength?
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  header("location: ../../../web-pages/login/sign-up.html?signup=invalidemail");
+  header("location: /COMP475-Graduation-Tracker/web-pages/login/sign-up.php?sign-up=invalidEmail");
   exit();
-} else {
-  //sign up the user
-  createUser($conn, $firstName, $lastName, $email, $password);
+} 
+
+if (doesEmailExist($conn, $email)){
+  header("location: /COMP475-Graduation-Tracker/web-pages/login/sign-up.php?sign-up=emailIsTaken");
+  exit();
 }
 
-
-
-
-
-
-
-
-
-
-function areThereEmptyFields($firstName, $lastName, $email, $password, $passwordRepeat)
-{
-
-  //if any of the input fields are empty retrun true
-  if (empty($firstName) || empty($lastName) || empty($email) || empty($password || empty($passwordRepeat))) {
-    return true;
-  }
-  //if none of the fields are empty return false
-  return false;
+if (arePasswordsDifferent($password, $passwordRepeat)){
+  header("location: /COMP475-Graduation-Tracker/web-pages/login/sign-up.php?sign-up=passwordsDoNotMatch");
+  exit();
 }
 
-/*
-function areThereInvalidCharachters(){
-  if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    return true;
-  }
-  return false;
-}
-*/
-
-function isEmailInvalid($email)
-{
-  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    return true;
-  }
-  return false;
-}
-
-function arePasswordsDifferent($password, $passwordRepeat)
-{
-  if ($password != $passwordRepeat) {
-    return true;
-  }
-  return false;
-}
-
-
-function doesUsernameAlreadyExist($conn, $username, $email){
-  //question mark is a placeholder for username
-  //prevents sql injection by sending sql statement to database first
-  //then fills in placeholders
-  $sql = "SELECT * FROM users WHERE username = ? OR userEmail = ?;";
-
-
-  $stmt = mysqli_stmt_init($conn);
-
-  //check for errors
-  //if statement cannot be prepared with database connection
-  if (!mysqli_stmt_prepare($stmt, $sql)){
-    //error
-    header("location: ../signUp.php?error=preparedStatementFailed");
-    exit();
-  }
-
-  //bind the statement with username and password input(statement, datatypes, data, data)
-  mysqli_stmt_bind_param($stmt, "s", $email);
-  //execute the sql statement with username and passwordr
-  mysqli_stmt_execute($stmt);
-
-  $resultData = mysqli_stmt_get_result($stmt);
-
-  //if there are results...
-  if ($row = mysqli_fetch_assoc($resultData)){
-    //return the data that exists
-    return $row;
-
-  }
-  // if there are no results
-  else{
-    return false;
-  }
-
-  //closes the prepared statement
-  mysqli_stmt_close($stmt);
-}
+//sign up the user if no errors
+//createUser($conn, $firstName, $lastName, $email, $password);
+header("location: /COMP475-Graduation-Tracker/web-pages/login/login.php?sign-up=success");
 
 
 
-function createUser($conn, $firstName, $lastName, $email, $password)
-{
-  //question mark is a placeholder for username
-  //prevents sql injection by sending sql statement to database first
-  //then fills in placeholders
-  $sql = "INSERT INTO users (usersFirstName, usersLastName, usersEmail, usersPassword) VALUES (?,?,?,?);";
 
 
-  $stmt = mysqli_stmt_init($conn);
-
-  //check for errors
-  //if statement cannot be prepared with database connection
-  if (!mysqli_stmt_prepare($stmt, $sql)) {
-    //error
-    header("location: ../../../web-pages/login/sign-up.html?error=preparedStatementFailed");
-    exit();
-  }
-
-  //hashes/encrypts password to keep it secure and unreadable in database
-  //$hashedPassword = password_hash($password, PASSWORD_DEFAULT)
-
-  //bind the statement with username and password input(statement, datatypes, data, data)
-  mysqli_stmt_bind_param($stmt, "ssss", $firstName, $lastName, $email, $password);
-  //execute the sql statement with username and passwordr
-  mysqli_stmt_execute($stmt);
-
-  //closes the prepared statement
-  mysqli_stmt_close($stmt);
-
-  //send user back to homepage after signing uo
-  header("location: ../../../web-pages/login/sign-up.html?error=none");
-}
