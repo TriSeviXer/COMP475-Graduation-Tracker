@@ -8,10 +8,10 @@
     </head>
     <body>
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="../about.html">About</a>
-            <a href="login.html">Login</a>
-			<a class="positive" href="sign-up.html">Sign-up</a>
+            <a href="../index.php">Home</a>
+            <a href="../about.php">About</a>
+            <a href="login.php">Login</a>
+			<a class="positive" href="sign-up.php">Sign-up</a>
         </nav>
         <main>
             <form action="../../resources/utilities/includes/login.inc.php" method="post">
@@ -28,7 +28,7 @@
                     <input type="password" name="password" size="32" required>
 
                     <!-- Link to a recovery page.-->
-                    <a href="recovery.html">Forgot password...</a>
+                    <a href="recovery.php">Forgot password...</a>
 
                     <!-- Confirmation to log into the system. -->
                     <section class="right-align">

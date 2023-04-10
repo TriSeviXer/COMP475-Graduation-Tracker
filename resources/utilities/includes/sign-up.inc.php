@@ -48,7 +48,7 @@ if (arePasswordsDifferent($password, $passwordRepeat)){
 }
 
 //sign up the user if no errors
-//createUser($conn, $firstName, $lastName, $email, $password);
+createUser($conn, $firstName, $lastName, $email, $password);
 header("location: /COMP475-Graduation-Tracker/web-pages/login/login.php?sign-up=success");
 
 

@@ -6,18 +6,9 @@
         <link rel="Stylesheet" type="text/css" href="../resources/utilities/styles/grad-tracker.css">
     </head>
     <body>
-<<<<<<< Updated upstream:web-pages/index.html
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="login/login.html">Login</a>
-            <a class="positive" href="login/sign-up.html">Sign-up</a>
-        </nav>
-=======
         <?php
             include '../resources/utilities/includes/navigation.inc.php';
         ?>
->>>>>>> Stashed changes:web-pages/index.php
         <header>
             <h1>Commonwealth University Graduation Tracker</h1>
             <h2>Your future begins here!</h2>
