@@ -7,12 +7,9 @@
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
     </head>
     <body>
-        <nav>
-            <a href="../index.php">Home</a>
-            <a href="../about.php">About</a>
-            <a href="login.php">Login</a>
-			<a class="positive" href="sign-up.php">Sign-up</a>
-        </nav>
+        <?php
+            include '../../resources/utilities/includes/navigation.inc.php';
+        ?>
         <main>
             <form action="../../resources/utilities/includes/login.inc.php" method="post">
                 <fieldset>
@@ -37,10 +34,10 @@
 
                 </fieldset>
                 <?php
-                //error handling for sign-up
+                //error handling for login
 
                     //read the url
-                    //if "sign-up" is after ?...
+                    //if "login" is after ?...
                     if (isset($_GET["login"])) {
                         //if "sign-up" = "emptyInput"
                         if ($_GET["login"] == "emptyInput"){
@@ -48,6 +45,12 @@
                         }
                         else if ($_GET["login"] == "incorrectLogin"){
                             echo "<p>Incorrect Email or Password!</p>";
+                        }
+                    }
+                    if (isset($_GET["sign-up"])) {
+                        //if "sign-up" = "success"
+                        if ($_GET["sign-up"] == "success"){
+                            echo "<p>Successful sign up!</p>";
                         }
                     }
                 ?>

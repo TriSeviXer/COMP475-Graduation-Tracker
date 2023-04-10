@@ -7,15 +7,12 @@
         <script src="../resources/utilities/scripts/grad-script.js" defer></script>
     </head>
     <body>
-        <nav>
-            <a href="index.php">Home</a>
-			<a href="about.php">About</a>
-			<a href="login/login.php">Login</a>
-			<a class="positive" href="login/sign-up.php">Sign-up</a>
-        </nav>
-        <header>
-    	    <h1>About</h1>
-        </header>
+        <?php
+            include '../resources/utilities/includes/navigation.inc.php';
+        ?>
+		<header>
+		    <h1>About</h1>
+		</header>
         <main>
             <div class = "about-main">
                 <div class = "gradtrackInfo">			
@@ -27,7 +24,7 @@
                     </p>
                 </div>
             </div>
-        </main>
+		</main>
         <footer>
 
         </footer>

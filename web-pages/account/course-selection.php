@@ -7,12 +7,9 @@
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
     </head>
     <body>
-        <nav>
-            <a href="index.html">Home</a>
-    		<a href="about.html">About</a>
-	    	<a href="login/login.html">Login</a>
-    		<a class="positive" href="login/sign-up.html">Sign-up</a>
-        </nav>
+        <?php
+            include '../../resources/utilities/includes/navigation.inc.php';
+        ?>
         <header>
             <h1>Course Scheduling</h1>
         </header>

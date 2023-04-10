@@ -7,12 +7,9 @@
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
     </head>
     <body>
-        <nav>
-            <a href="../index.php">Home</a>
-            <a href="../about.php">About</a>
-            <a href="login.php">Login</a>
-			<a class="positive" href="sign-up.php">Sign-up</a>
-        </nav>
+        <?php
+            include '../../resources/utilities/includes/navigation.inc.php';
+        ?>
         <main>
 
             <!-- Form for creating a new account. -->
