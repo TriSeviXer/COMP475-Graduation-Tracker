@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <nav>
     <a href="/COMP475-Graduation-Tracker/web-pages/index.php">Home</a>
     <a href="/COMP475-Graduation-Tracker/web-pages/about.php">About</a>
