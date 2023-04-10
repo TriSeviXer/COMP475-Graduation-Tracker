@@ -8,10 +8,10 @@
     </head>
     <body>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="login/login.html">Login</a>
-            <a class="positive" href="login/sign-up.html">Sign-up</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="login/login.php">Login</a>
+            <a class="positive" href="login/sign-up.php">Sign-up</a>
         </nav>
         <header>
             <h1>Commonwealth University Graduation Tracker</h1>
