@@ -15,7 +15,7 @@
         </header>
         <main class="selection">
             <form>
-                <h1>Filter</h1>
+                <h1>CLASS FILTER</h1>
                 <fieldset>
 
                     <legend>Tracks</legend>
@@ -115,7 +115,7 @@
                 </fieldset>
             </form>
             <div class="container">
-                <h1>CLASS LIST</h1>
+                <h1>AVAILABLE CLASSES</h1>
                 <div id="comp100" class="course">
                     <div class="course-heading">
                         <button onclick="toggleContent('comp100')">COMP100 Intro to Computers</button>
@@ -155,7 +155,7 @@
             </div>
             
             <div class="container">
-                <h1>SCHEDULE</h1>
+                <h1>MY SCHEDULE</h1>
                 <div id="comp400" class="course">
                     <div class="course-heading">
                         <button onclick="toggleContent('comp400')">COMP100 Intro to Computers</button>
