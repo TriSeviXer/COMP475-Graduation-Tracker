@@ -11,14 +11,17 @@
             include '../../resources/utilities/includes/navigation.inc.php';
         ?>
         <header>
-
+            <h1>Control Panel</h1>
         </header>
         <main class="selection">
             <div class="container">
                 <h1>MAJOR TRACKING</h1>
                 <div id="comp400" class="course">
                     <div class="course-heading">
-                        <button onclick="toggleContent('comp400')">BS Computer Science</button>
+                        <button onclick="toggleContent('comp400')">
+                            <img src="/resources/images/icons/icon-dropdown.svg">
+                            BS Computer Science
+                        </button>
                         <button class="negative">Remove</button>
                         <button class="nutural">View</button>
                     </div>
