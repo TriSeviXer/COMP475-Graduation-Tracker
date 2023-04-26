@@ -1,0 +1,188 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1em;
+    padding: 1em;
+
+    background-color: white;
+    border-radius: 0.25em;
+
+    box-shadow: 1px 1px 20px 1px var(--frm-form-shadow-color);
+}
+
+/*
+    ===================================================
+    Dropdown Properties
+    ===================================================
+*/
+
+/*
+    Dropdown style.
+*/
+section.dropdown-box {
+    margin-block: 0.5em;
+    padding: 0;
+
+    min-width: auto;
+    width: 100vw;
+    max-width: 30em;
+
+    border-radius: 0.25em;
+    box-shadow: 1px 1px 1px 1px #a7a7a7;
+}
+
+/*
+    ===================================================
+    Dropdown Heading Properties
+    ===================================================
+*/
+
+/*
+    Header style.
+*/
+section.dropdown-box header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-block: 0 0;
+    padding: 0;
+    
+    background-color: #efefef;
+
+    border-radius: inherit;
+}
+
+/*
+    Header header hover style. 
+*/
+section.dropdown-box header:hover {
+    background-color: #dadada;
+}
+
+/*
+    Header button style. 
+*/
+section.dropdown-box header button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 0.5em 0.75em 0.5em 0.75em;
+
+    font-size: 12pt;
+    text-transform: capitalize;
+
+    border: 0em;
+    border-radius: 0.25em;
+
+    cursor: pointer;
+}
+
+/* 
+    Header first button style. 
+*/
+section.dropdown-box header>button:first-child {
+    flex-grow: 2;
+
+    margin: 0 0 0 0;
+    padding-block: 1em 1em;
+    padding-inline: 1em 0.25em;
+
+    text-align: left;
+
+    background-color: inherit;
+    border-style: none;   
+}
+
+/*
+    Header icon style.
+*/
+section.dropdown-box header>button>img.icon {
+    margin-inline-end: 10px;
+    transform: rotate(90deg);
+}
+
+section.dropdown-box header.positive,
+section.dropdown-box.collapsed header.positive:hover {
+    
+    background-color: var(--btn-positive-color);
+}
+
+section.dropdown-box header.positive:hover,
+section.dropdown-box.collapsed header.positive {
+    background-color: var(--btn-positive-color-selected);
+}
+
+section.dropdown-box header.positive button {
+    color: white;
+    justify-content: center;
+}
+
+/*
+    ===================================================
+    Dropdown Article Properties
+    ===================================================
+*/
+
+/*
+    Article style.
+*/
+section.dropdown-box article {
+    display: none;
+
+    margin-block: 0 0;
+    padding: 0.5em;
+    
+    background-color: whitesmoke;
+
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+/*
+    Article heading style.
+*/
+section.dropdown-box article h1 {
+    font-size: 14pt;
+    margin-block: 2pt;
+}
+
+/*
+    Article paragraph style.
+*/
+section.dropdown-box article p {
+    margin-block-start: 0;
+}
+
+/*
+    ===================================================
+    Dropdown Collapse Properties
+    ===================================================
+*/
+
+/*
+    Collapse style for dropdown header.
+*/
+section.dropdown-box.collapsed>header {
+    background-color: #dadada;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*
+    Collapse style for dropdown article.
+*/
+section.dropdown-box.collapsed>article {
+    display: block;
+}
+
+/*
+    Collapse style for dropdown icon.
+*/
+section.dropdown-box.collapsed>header>button>img.icon {
+    transform: rotate(-90deg);
+}

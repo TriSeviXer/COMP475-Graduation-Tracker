@@ -14,33 +14,40 @@
             <h1>Control Panel</h1>
         </header>
         <main class="selection">
-            <div class="container">
+            <section class="container">
+                <!-- Heading for Tracking -->
                 <h1>MAJOR TRACKING</h1>
-                <div id="comp400" class="course">
-                    <div class="course-heading">
+                <section id="comp400" class="dropdown-box">
+                    <header>
                         <button onclick="toggleContent('comp400')">
-                            <img src="/resources/images/icons/icon-dropdown.svg">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
                             BS Computer Science
                         </button>
                         <button class="negative">Remove</button>
                         <button class="nutural">View</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <h1>Major Description</h1>
                         <p>Example major description.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
+                    </article>
+                </section>
+                <button class="positive">Add Major</button>
+            </section>
+            <section class="container">
+                
+                <!-- Heading for Schedules -->
                 <h1>MY SCHEDULES</h1>
                 
-                <div id="fall-2023" class="course">
-                    <div class="course-heading">
-                        <button onclick="toggleContent('fall-2023')">Fall 2023</button>
+                <section id="fall-2023" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('fall-2023')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            Fall 2023
+                        </button>
                         <button class="negative">Remove</button>
                         <button class="positive">Edit</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <table>
                             <thead>
                                 <tr>
@@ -79,15 +86,19 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-                <div id="spring-2024" class="course">
-                    <div class="course-heading">
-                        <button onclick="toggleContent('spring-2024')">Spring 2024</button>
+                    </article>
+                </section>
+
+                <section id="spring-2024" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('spring-2024')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            Spring 2024
+                        </button>
                         <button class="negative">Remove</button>
                         <button class="positive">Edit</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <table>
                             <thead>
                                 <tr>
@@ -126,13 +137,14 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-                <div id="add-schedule" class="course">
-                    <div class="course-heading">
+                    </article>
+                </section>
+                <button class="positive">Add Schedule</button>
+                <section id="add-schedule" class="dropdown-box">
+                    <header class="positive">
                         <button onclick="toggleContent('add-schedule')">New Schedule</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <select name="Semester">
                             <option>Fall</option>
                             <option>Winter</option>
@@ -141,9 +153,9 @@
                         </select>
                         <input type="number" min="2023" max="2053" step="1" value="2023">
                         <button class="positive">Add</button>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </section>
         </main>
         <footer>
 

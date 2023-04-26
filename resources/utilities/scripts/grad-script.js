@@ -33,6 +33,5 @@ function nextFieldset(curr, next){
 
 function toggleContent(id){
     let parent = document.getElementById(id);
-    parent.firstElementChild.classList.toggle("course-dropdown-heading");
-    parent.lastElementChild.classList.toggle("course-dropdown-content");
+    parent.classList.toggle("collapsed");
 }

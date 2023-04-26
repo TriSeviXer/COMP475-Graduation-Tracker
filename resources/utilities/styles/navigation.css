@@ -5,8 +5,14 @@
 */
 
 nav {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
     margin: 0 0 0 0;
-    padding: 1em 1em 1em 1em;
+    padding: 0.5em 1em 0.5em 1em;
 
     font-size: 16pt;
     
@@ -16,18 +22,24 @@ nav {
 
 nav a {
 
-    margin: 0.1em 0.1em 0.1em 0.1em;
-    padding: 0.3em 1em 0.3em 1em;
+    margin-inline: 0.25em 0.25em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
 
     text-decoration: none;
     text-transform: capitalize;
 
     color: inherit;
-    border-radius: 0.25em;
+    border-radius: 0.15em;
 
 }
 
 nav a:hover {
 
     background-color: #202020;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
 }
