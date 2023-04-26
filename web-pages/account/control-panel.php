@@ -15,8 +15,17 @@
         </header>
         <main class="selection">
             <section class="container">
+                <h1>MY PROFILE</h1>
+                <figure>
+                    <img src="" alt="User profile.">
+                    <figcaption>user@email.edu</figcaption>
+                </figure>
+                <button>Settings</button>
+                <button>Help</button>
+            </section>
+            <section class="container">
                 <!-- Heading for Tracking -->
-                <h1>MAJOR TRACKING</h1>
+                <h1>MY MAJORS</h1>
                 <section id="comp400" class="dropdown-box">
                     <header>
                         <button onclick="toggleContent('comp400')">
@@ -139,10 +148,12 @@
                         </table>
                     </article>
                 </section>
+                <button class="positive" onclick="openDialog('dialog-schedule')">New Schedule</button>
+<!--
                 <button class="positive">Add Schedule</button>
                 <section id="add-schedule" class="dropdown-box">
                     <header class="positive">
-                        <button onclick="toggleContent('add-schedule')">New Schedule</button>
+                        <button onclick="openDialog('dialog-schedule')">New Schedule</button>
                     </header>
                     <article>
                         <select name="Semester">
@@ -157,6 +168,7 @@
                 </section>
             </section>
         </main>
+    -->
         <footer>
 
         </footer>

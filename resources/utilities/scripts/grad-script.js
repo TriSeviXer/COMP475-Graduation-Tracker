@@ -31,7 +31,19 @@ function nextFieldset(curr, next){
 
 }
 
+/**
+ * Toggles the content of a heading.
+ * @param {String} id 
+ */
 function toggleContent(id){
     let parent = document.getElementById(id);
     parent.classList.toggle("collapsed");
+}
+
+/**
+ * Opens a dialog box within the browser window.
+ * @param {String} id 
+ */
+function openDialog(id){
+
 }
