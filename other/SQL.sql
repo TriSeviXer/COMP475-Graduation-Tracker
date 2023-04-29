@@ -8,9 +8,7 @@ CREATE TABLE users(
 );
 
 /*select usersEmail*/
-"SELECT * FROM users WHERE userEmail = ?;"
-
-
+"SELECT * FROM user WHERE user_email = ?;"
 
 
 /*create user table*/
