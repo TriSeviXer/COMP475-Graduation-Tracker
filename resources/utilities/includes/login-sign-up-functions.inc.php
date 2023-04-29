@@ -37,7 +37,7 @@ function doesEmailExist($conn, $email){
   //question mark is a placeholder for username
   //prevents sql injection by sending sql statement to database first
   //then fills in placeholders
-  $sql = "SELECT * FROM users WHERE usersEmail = ?;";
+  $sql = "SELECT * FROM user WHERE user_email = ?;";
 
   //initialize a new prepared statement
   $stmt = mysqli_stmt_init($conn);
@@ -79,7 +79,7 @@ function createUser($conn, $firstName, $lastName, $email, $password)
     //question mark is a placeholder for username
     //prevents sql injection by sending sql statement to database first
     //then fills in placeholders
-    $sql = "INSERT INTO users (usersFirstName, usersLastName, usersEmail, usersPassword) VALUES (?,?,?,?);";
+    $sql = "INSERT INTO user (user_first_name, user_last_name, user_email, user_password) VALUES (?,?,?,?);";
 
     //initialize the prepared statement
     $stmt = mysqli_stmt_init($conn);
@@ -132,7 +132,7 @@ function loginUser($conn, $email, $password){
     }
 
     //check to see if the hashed passwords match
-    $hashedPassword = $emailExists["usersPassword"];
+    $hashedPassword = $emailExists["user_password"];
     $checkHashedPassword = password_verify($password, $hashedPassword);
 
     if ($checkHashedPassword == false){
@@ -141,7 +141,7 @@ function loginUser($conn, $email, $password){
     }
     else if ($checkHashedPassword == true){
         session_start();
-        $_SESSION["usersId"] = $emailExists["userId"];
+        $_SESSION["user_id"] = $emailExists["user_id"];
     }
 }
 
