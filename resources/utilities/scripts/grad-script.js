@@ -31,8 +31,20 @@ function nextFieldset(curr, next){
 
 }
 
+/**
+ * Toggles the content of a heading.
+ * @param {String} id 
+ */
 function toggleContent(id){
     let parent = document.getElementById(id);
-    parent.firstElementChild.classList.toggle("course-dropdown-heading");
-    parent.lastElementChild.classList.toggle("course-dropdown-content");
+    parent.classList.toggle("collapsed");
+}
+
+/**
+ * Opens a dialog box within the browser window.
+ * @param {String} id 
+ */
+function toggleDialog(id){
+    let dialog = document.getElementById(id);
+    dialog.classList.toggle("collapsed");
 }

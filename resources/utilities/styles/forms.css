@@ -1,13 +1,13 @@
 /*
-
-    Style sheet for website forms.
-
+    ===================================================
+    Form Properties
+    ===================================================
 */
 
 :root {
 
     --frm-form-color: #FFFFFF;
-    --frm-form-shadow-color: #6e6e6e;
+    --frm-form-shadow-color: #822121;
     --frm-fieldset-border-color: #e7e7e7;
 
 }
@@ -42,7 +42,12 @@ form fieldset {
     border-radius: 0.5em;
 }
 
-/* General form button properties. */
+/*
+    ===================================================
+    Form Input Properties
+    ===================================================
+*/
+
 form button {
 
     margin: 0.1em 0.1em 0.1em 0.1em;
@@ -55,6 +60,12 @@ form button {
     border-radius: 0.25em;
 
 }
+
+/*
+    ===================================================
+    Form Typeface Properties
+    ===================================================
+*/
 
 form>h1 {
     margin: 0 0 0 0;
@@ -85,13 +96,54 @@ form fieldset p {
 }
 
 /*
-    Input elements span the fieldset by default.
+    ===================================================
+    Form Input Properties
+    ===================================================
 */
+
 form fieldset>input,
 form fieldset>select {
     align-self: stretch;
     margin-bottom: 8pt;
     font-size: 14pt;
+}
+
+form fieldset>section select {
+    min-width: max-content;
+    width: 10em;
+
+    margin-block: 0.1em;
+    margin-inline: 0.5em;
+
+    padding-block: 0.3em;
+    padding-inline: 1em;
+
+    font-size: 14pt;
+
+    border-style: none;
+    border-radius: 0.25em;
+
+    box-shadow: 1px 1px 1px 1px #a7a7a7;
+}
+
+form fieldset>section input[type="number"] {
+    min-width: max-content;
+    width: 10em;
+
+    margin-block: 0.1em;
+    margin-inline: 0.5em;
+
+    padding-block: 0.3em;
+
+    font-size: 14pt;
+    
+    border-style: solid;
+    border-color: #f3f3f3;
+    border-width: 1px;
+    border-radius: 0.25em;
+
+    box-shadow: 1px 1px 1px 1px #a7a7a7;
+
 }
 
 /*
@@ -123,6 +175,12 @@ form fieldset>section>p {
 }
 
 /*
+    ===================================================
+    Form Classes
+    ===================================================
+*/
+
+/*
     Class for right aligning items in a section.
 */
 form fieldset>section.right-align {
@@ -137,6 +195,7 @@ form fieldset>section.left-align {
     margin-left: 0;
     margin-right: auto;
 }
+
 
 form>fieldset meter {
     width: 45%;

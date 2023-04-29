@@ -19,7 +19,7 @@
         </header>
         <main class="selection">
             <form>
-                <h1>Filter</h1>
+                <h1>CLASS FILTER</h1>
                 <fieldset>
 
                     <legend>Tracks</legend>
@@ -118,61 +118,88 @@
 
                 </fieldset>
             </form>
-            <div class="container">
-                <h1>CLASS LIST</h1>
-                <div id="comp100" class="course">
-                    <div class="course-heading">
-                        <button onclick="toggleContent('comp100')">COMP100 Intro to Computers</button>
+            <section class="container">
+                <h1>AVAILABLE CLASSES</h1>
+                <section id="comp100" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp100')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
                         <button class="positive">Add</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <h1>Course Description</h1>
                         <p>Example description text.</p>
                         <h1>Prerequisites</h1>
                         <p>None</p>
-                    </div>
-                </div>
-                <div id="comp200" class="course">
-                    <div class="course-heading">
-                        <button onclick="toggleContent('comp200')">COMP100 Intro to Computers</button>
+                    </article>
+                </section>
+                <section id="comp200" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp200')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">    
+                            COMP100 Intro to Computers
+                        </button>
                         <button class="positive">Add</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <h1>Course Description</h1>
                         <p>Example description text.</p>
                         <h1>Prerequisites</h1>
                         <p>None</p>
-                    </div>
-                </div>
-                <div id="comp300" class="course">
-                    <div class="course-heading">
-                        <button onclick="toggleContent('comp300')">COMP100 Intro to Computers</button>
+                    </article>
+                </section>
+                <section id="comp300" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp300')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
                         <button class="positive">Add</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <h1>Course Description</h1>
                         <p>Example description text.</p>
                         <h1>Prerequisites</h1>
                         <p>None</p>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+            </section>
             
-            <div class="container">
-                <h1>SCHEDULE</h1>
-                <div id="comp400" class="course">
-                    <div class="course-heading">
-                        <button onclick="toggleContent('comp400')">COMP100 Intro to Computers</button>
+            <section class="container">
+                <h1>MY SCHEDULE</h1>
+                <section id="schedule-comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('schedule-comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
                         <button class="negative">Remove</button>
-                    </div>
-                    <div class="course-dropdown">
+                    </header>
+                    <article>
                         <h1>Course Description</h1>
                         <p>Example description text.</p>
                         <h1>Prerequisites</h1>
                         <p>None</p>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </section>
+            </section>
             
         </main>
     </body>
