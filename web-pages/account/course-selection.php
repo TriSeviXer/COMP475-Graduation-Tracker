@@ -9,6 +9,7 @@
         <title>Graduation Tracker</title>
         <link rel="Stylesheet" type="text/css" href="../../resources/utilities/styles/grad-tracker.css">
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
+        <script src="../../resources/utilities/scripts/course-selection.js" defer></script>
     </head>
     <body>
         <?php
@@ -25,27 +26,32 @@
                     <legend>Tracks</legend>
 
                     <section class="left-align">
-                        <input type="checkbox" name="all">
+                        <input type="checkbox" name="all" id="checkbox-all" onchange="checkAll(this)">
                         <label>All</label>
                     </section>
 
                     <!-- Filter for Major Related -->
                     <section class="left-align">
-                        <input type="checkbox" name="major">
+                        <input type="checkbox" name="major" id="checkbox-major" onchange="displayCourses()">
                         <label>Major</label>
                     </section>
 
                     <!-- Filter for Minor Related -->
+<!--
                     <section class="left-align">
-                        <input type="checkbox" name="minor">
+                        <input type="checkbox" name="minor" id="checkbox-minor" onchange="displayCourses()">
                         <label>Minor</label>
                     </section>
+-->
 
                     <!-- Filter for Concentration Related -->
+<!--
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-concentration" onchange="displayCourses()">
                         <label>Concentration</label>
                     </section>
+
+-->
 
                 </fieldset>
                 <fieldset>
@@ -54,25 +60,19 @@
 
                     <!-- Filter for Mathematical and Computational Thinking -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-mathematical-computational-thinking" onchange="displayCourses()">
                         <label>Mathematical and Computational Thinking</label>
                     </section>
 
                     <!-- Filter for Written Communication -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-written-communication" onchange="displayCourses()">
                         <label>Written Communication</label>
-                    </section>
-
-                    <!-- Filter for Critical Thinking -->
-                    <section class="left-align">
-                        <input type="checkbox" name="concentration">
-                        <label>Critical Thinking</label>
                     </section>
 
                     <!-- Filter for Oral Communication -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-oral-communication" onchange="displayCourses()">
                         <label>Oral Communication</label>
                     </section>
 
@@ -83,19 +83,19 @@
 
                     <!-- Filter for Philosophy, Literature, and Aesthetic -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-philosphy-literature-aesthetic" onchange="displayCourses()">
                         <label>Philosophy, Literature, and Aesthetic</label>
                     </section>
                     
                     <!-- Filter for Natural Science Inquiry -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-natural-science-inquiry" onchange="displayCourses()">
                         <label>Natural Science Inquiry</label>
                     </section>
 
                     <!-- Filter for Historical, Behavioral, and Social Science -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-historical-behavioral-social-science" onchange="displayCourses()">
                         <label>Historical, Behavioral, and Social Science</label>
                     </section>
 
@@ -106,13 +106,13 @@
 
                     <!-- Filter for Global Awareness & Citizenship -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-global-awareness-citizenship" onchange="displayCourses()">
                         <label>Global Awareness & Citizenship</label>
                     </section>
 
                     <!-- Filter for Wellness -->
                     <section class="left-align">
-                        <input type="checkbox" name="concentration">
+                        <input type="checkbox" name="concentration" id="checkbox-wellness" onchange="displayCourses()">
                         <label>Wellness</label>
                     </section>
 
@@ -200,7 +200,7 @@
                     </article>
                 </section>
             </section>
-            
+             
         </main>
     </body>
 </html>
