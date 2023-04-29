@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,7 +58,7 @@
                             Fall 2023
                         </button>
                         <button class="negative">Remove</button>
-                        <button class="positive">Edit</button>
+                        <button class="positive" onclick="window.location.href='/COMP475-Graduation-Tracker/web-pages/account/course-selection.php';">Edit</button>
                     </header>
                     <article>
                         <table>
@@ -105,7 +109,7 @@
                             Spring 2024
                         </button>
                         <button class="negative">Remove</button>
-                        <button class="positive">Edit</button>
+                        <button class="positive" onclick="window.location.href='/COMP475-Graduation-Tracker/web-pages/account/course-selection.php';">Edit</button>
                     </header>
                     <article>
                         <table>
@@ -188,7 +192,7 @@
                     </section>
                     <section class="right-align">
                         <button class="negative" type="button" onclick="toggleDialog('dialog-schedule')">Cancel</button>
-                        <button class="positive" type="button" onclick="toggleDialog('dialog-schedule')">Add</button>
+                        <button class="positive" type="button" onclick="window.location.href='/COMP475-Graduation-Tracker/web-pages/account/course-selection.php';">Add</button>
                     </section>
                 </fieldset>
             </form>

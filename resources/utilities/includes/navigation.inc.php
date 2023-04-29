@@ -3,7 +3,7 @@
     <a href="/COMP475-Graduation-Tracker/web-pages/about.php">About</a>
     <?php
         if (isset($_SESSION["user_id"])){
-            echo '<a href="/COMP475-Graduation-Tracker/web-pages/account/course-selection.php">Main Page</a>';
+            echo '<a href="/COMP475-Graduation-Tracker/web-pages/account/control-panel.php">Schedule</a>';
             echo '<a href="/COMP475-Graduation-Tracker/resources/utilities/includes/logout.inc.php">Log Out</a>';
         }
         else{
