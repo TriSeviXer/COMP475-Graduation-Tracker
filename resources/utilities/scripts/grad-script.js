@@ -44,6 +44,7 @@ function toggleContent(id){
  * Opens a dialog box within the browser window.
  * @param {String} id 
  */
-function openDialog(id){
-
+function toggleDialog(id){
+    let dialog = document.getElementById(id);
+    dialog.classList.toggle("collapsed");
 }
