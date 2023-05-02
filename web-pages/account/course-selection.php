@@ -11,13 +11,26 @@
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
         <script src="../../resources/utilities/scripts/course-selection.js" defer></script>
     </head>
-    <body>
         <?php
+    echo"<body onload=\"removeScheduledCourse(0, ".$_GET["semester_id"].")\">";
+        
             include '../../resources/utilities/includes/navigation.inc.php';
+            echo"
+            <header>
+                <h1>Course Scheduling</h1>
+                <h1>
+            ";
+            if (isset($_GET["semester_id"])){
+
+                echo"".$_GET["semester_season"]." ".$_GET["semester_year"]."";
+                echo"<p hidden id=\"semester_id\">".$_GET["semester_id"]."</p>";
+
+            }
+            echo"
+                </h1>
+            </header>";
         ?>
-        <header>
-            <h1>Course Scheduling</h1>
-        </header>
+        
         <main class="selection">
             <form>
                 <h1>CLASS FILTER</h1>
@@ -68,6 +81,7 @@
                         <input type="checkbox" name="concentration" id="checkbox-mathematical-computational-thinking" onchange="displayCourses()">
                         <label>Mathematical and Computational Thinking</label>
                     </section>
+                    
 
                     <!-- Filter for Written Communication -->
                     <section class="left-align">
@@ -151,20 +165,26 @@
             
             <section class="container">
                 <h1>MY SCHEDULE</h1>
-                <section id="schedule-comp400" class="dropdown-box">
-                    <header>
-                        <button onclick="toggleContent('schedule-comp400')">
-                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
-                            COMP100 Intro to Computers
-                        </button>
-                        <button class="negative">Remove</button>
-                    </header>
-                    <article>
-                        <h1>Course Description</h1>
-                        <p>Example description text.</p>
-                        <h1>Prerequisites</h1>
-                        <p>None</p>
-                    </article>
+                <section id=myScheduleCourses>
+
+                <!--
+                    <section id="schedule-comp400" class="dropdown-box">
+                        <header>
+                            <button onclick="toggleContent('schedule-comp400')">
+                                <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                                COMP100 Intro to Computers
+                            </button>
+                            <button class="negative">Remove</button>
+                        </header>
+                        <article>
+                            <h1>Course Description</h1>
+                            <p>Example description text.</p>
+                            <h1>Prerequisites</h1>
+                            <p>None</p>
+                        </article>
+                    </section>
+                -->
+                
                 </section>
             </section>
 

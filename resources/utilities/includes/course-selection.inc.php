@@ -56,7 +56,7 @@ if ( $Results )
 
         echo"
                 </button>
-                <button class=\"positive\">Add</button>
+                <button class=\"positive\" onclick=\"displayScheduledCourses(".$Row[0].")\">Add</button>
             </header>
             <article>
                 <h1>Course Description</h1>
@@ -65,7 +65,10 @@ if ( $Results )
                 <p>None</p>
             </article>
         </section>
+
+       
     ";
+
 
 
 
