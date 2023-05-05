@@ -14,8 +14,8 @@
         <title>Graduation Tracker</title>
         <link rel="Stylesheet" type="text/css" href="../../resources/utilities/styles/grad-tracker.css">
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
+        <script src="../../resources/utilities/scripts/control-panel.js" defer></script>
     </head>
-    <body>
         <?php
             include '../../resources/utilities/includes/navigation.inc.php';
         ?>
@@ -98,106 +98,47 @@
                 <!-- Heading for Schedules -->
                 <h1>MY SCHEDULES</h1>
                 
-                <section id="fall-2023" class="dropdown-box">
-                    <header>
-                        <button onclick="toggleContent('fall-2023')">
-                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
-                            Fall 2023
-                        </button>
-                        <button class="negative">Remove</button>
-                        <button class="positive" onclick="window.location.href='/COMP475-Graduation-Tracker/web-pages/account/course-selection.php';">Edit</button>
-                    </header>
-                    <article>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Code</th>
-                                    <th>Name</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </article>
+                <section>
+                
+                <?php
+                
+                require_once '../../resources/utilities/includes/control-panel-semester-couses.inc.php';
+                loadSemesterAndCourses($_SESSION["user_id"], $conn);
+                ?>
+<!--
+                    <section id="spring-2024" class="dropdown-box">
+                        <header>
+                            <button onclick="toggleContent('spring-2024')">
+                                <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                                Spring 2024
+                            </button>
+                            <button class="negative">Remove</button>
+                            <button class="positive" onclick="window.location.href='/COMP475-Graduation-Tracker/web-pages/account/course-selection.php';">Edit</button>
+                        </header>
+                        <article>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>COMP100</td>
+                                        <td>Introduction to Computers<td>
+                                    </tr>
+                                    <tr>
+                                        <td>COMP100</td>
+                                        <td>Introduction to Computers<td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </section>
+-->
                 </section>
-                <section id="spring-2024" class="dropdown-box">
-                    <header>
-                        <button onclick="toggleContent('spring-2024')">
-                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
-                            Spring 2024
-                        </button>
-                        <button class="negative">Remove</button>
-                        <button class="positive" onclick="window.location.href='/COMP475-Graduation-Tracker/web-pages/account/course-selection.php';">Edit</button>
-                    </header>
-                    <article>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Code</th>
-                                    <th>Name</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                                <tr>
-                                    <td>COMP100</td>
-                                    <td>Introduction to Computers<td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </article>
-                </section>
+
                 <button class="positive" type="button" onclick="toggleDialog('dialog-schedule')">New Schedule</button>
 <!--
                 <button class="positive">Add Schedule</button>

@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
         $scheduleID = $Row[0];
         
     }else{
+
         $sql = "INSERT INTO `schedule`(`schedule_name`) VALUES ('schedule name');";
         $conn->query( $sql );
 
@@ -41,9 +42,11 @@ if (isset($_POST['submit'])) {
     from semester
     INNER JOIN schedule_semester
     ON schedule_semester.semester_id=semester.semester_id
-    where semester.semester_name = '".$semester." ".$year."' 
+    where semester.semester_name = '".$semester." ".$year."'
+    AND schedule_semester.schedule_id = '".$scheduleID."'
     ;";
     echo $sql;
+    
     $Results = $conn->query( $sql );
     $Row = $Results->fetch_row();
 
@@ -53,16 +56,13 @@ if (isset($_POST['submit'])) {
         
     }else{
 
-        echo "else \n";
    
         $sql = "INSERT INTO `semester`(`semester_name`) VALUES ('".$semester." ".$year."');";
         $conn->query( $sql );
-        echo $sql;
 
         $sql = "SELECT MAX(semester_id) FROM semester;";
         $Results = $conn->query( $sql );
         $Row = $Results->fetch_row();
-        echo $Row[0];
 
         $sql= "INSERT INTO schedule_semester(schedule_id, semester_id) VALUES (".$scheduleID.", $Row[0]);";
         $Results = $conn->query( $sql );
@@ -70,5 +70,6 @@ if (isset($_POST['submit'])) {
     }
 
     header("location: /COMP475-Graduation-Tracker/web-pages/account/course-selection.php?semester_id=$Row[0]&semester_season=$semester&semester_year=$year");
+    
 
 }
