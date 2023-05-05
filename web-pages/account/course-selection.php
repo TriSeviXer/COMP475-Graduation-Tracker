@@ -22,7 +22,7 @@
             ";
             if (isset($_GET["semester_id"])){
 
-                echo"".$_GET["semester_season"]." ".$_GET["semester_year"]."";
+                echo"".$_GET["semester_name"]."";
                 echo"<p hidden id=\"semester_id\">".$_GET["semester_id"]."</p>";
 
             }

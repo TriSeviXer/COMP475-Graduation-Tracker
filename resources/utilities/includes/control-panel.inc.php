@@ -69,7 +69,6 @@ if (isset($_POST['submit'])) {
 
     }
 
-    header("location: /COMP475-Graduation-Tracker/web-pages/account/course-selection.php?semester_id=$Row[0]&semester_season=$semester&semester_year=$year");
-    
-
+    $semester_name = $semester . " " . $year;
+    header("location: /COMP475-Graduation-Tracker/web-pages/account/course-selection.php?semester_id=$Row[0]&semester_name=$semester_name");
 }

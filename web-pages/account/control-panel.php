@@ -98,7 +98,7 @@
                 <!-- Heading for Schedules -->
                 <h1>MY SCHEDULES</h1>
                 
-                <section>
+                <section id=semestersAndCourses>
                 
                 <?php
                 
