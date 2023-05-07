@@ -49,7 +49,6 @@ if (isset($_POST['submit'])) {
         where semester.semester_name = '".$semester." ".$year."'
         AND schedule_semester.schedule_id = '".$scheduleID."'
         ;";
-        echo $sql;
         
         $Results = $conn->query( $sql );
         $Row = $Results->fetch_row();
@@ -84,8 +83,6 @@ if (isset($_POST['submit'])) {
                 FROM major
                 WHERE major_name = '".$major."'";
         
-        echo $sql;
-
         //execute the query
         if ($Results = $conn->query( $sql )){
 
@@ -111,5 +108,4 @@ if (isset($_POST['submit'])) {
             echo "query returned no results";
         }
     }
-    echo"h";
 }

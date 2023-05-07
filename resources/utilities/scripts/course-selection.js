@@ -25,7 +25,7 @@ var wellness = -1;
 
 if(checkboxMajor.checked){
     console.log("checkbox-major checked");
-    major = -1;
+    major = 1;
 }
 if(checkboxMathematicalComputationalThinking.checked){
     console.log("checkboxMathematicalComputationalThinking checked");
@@ -62,7 +62,7 @@ if(checkboxWellness.checked){
 }
 
 
-GetClasses( 'courses', mathematicalComputationalThinking, writtenCommunication, oralCommunication, philosphyLiteratureAesthetic,
+GetClasses( 'courses', major, mathematicalComputationalThinking, writtenCommunication, oralCommunication, philosphyLiteratureAesthetic,
  naturalScienceInquiry, historicalBehavioralSocialScience, globalAwarenessCitizenship, wellness);
 
 }
@@ -86,7 +86,7 @@ function checkAll(myCheckbox){
 
 // javascript for lab P6
 // get countries for a given class
-function GetClasses( ResultsID, mathematicalComputationalThinking, writtenCommunication, oralCommunication, philosphyLiteratureAesthetic,
+function GetClasses( ResultsID, major, mathematicalComputationalThinking, writtenCommunication, oralCommunication, philosphyLiteratureAesthetic,
     naturalScienceInquiry, historicalBehavioralSocialScience, globalAwarenessCitizenship, wellness )
 {
     // declare local variables
@@ -142,7 +142,8 @@ function GetClasses( ResultsID, mathematicalComputationalThinking, writtenCommun
     //
     //      to pass more than one, separate them with a ?. for example:
 
-    var Argument = "mathematicalComputationalThinking="     + mathematicalComputationalThinking
+    var Argument =  "major="                                + major
+                +   "&mathematicalComputationalThinking="   + mathematicalComputationalThinking
                 +   "&writtenCommunication="                + writtenCommunication
                 +   "&oralCommunication="                   + oralCommunication
                 +   "&philosphyLiteratureAesthetic="        + philosphyLiteratureAesthetic

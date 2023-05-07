@@ -1,23 +1,51 @@
 <?php
 
+session_start();
+
 //includes
 require_once 'database-handler.inc.php';
 
 echo"<h1>AVAILABLE CLASSES</h1>";
 
+$major_id = -1;
+
+
+if($_POST['major'] != -1){
+
+    $sql =  "
+        select major_id
+        from user
+        where user_id = ".$_SESSION['user_id']."
+        ";
+
+    if ($Results = $conn->query( $sql )){
+
+        if ($Row = $Results->fetch_row()){
+
+            $major_id = $Row[0];
+
+        }
+    }
+}
 
 
 
 // make a select statement to get data from the database
-$SQL = "select class_id, class_code, class_name from class
-    where   general_education_category_id = '".$_POST['mathematicalComputationalThinking']."' OR
-        general_education_category_id = '".$_POST['writtenCommunication']."' OR
-        general_education_category_id = '".$_POST['oralCommunication']."' OR
-        general_education_category_id = '".$_POST['philosphyLiteratureAesthetic']."' OR
-        general_education_category_id = '".$_POST['naturalScienceInquiry']."' OR
-        general_education_category_id = '".$_POST['historicalBehavioralSocialScience']."' OR
-        general_education_category_id = '".$_POST['globalAwarenessCitizenship']."' OR
-        general_education_category_id = '".$_POST['wellness']."'
+$SQL = "
+    select class.class_id, class.class_code, class.class_name
+    from class
+    LEFT JOIN class_major
+    ON class.class_id = class_major.class_id
+    where
+        class_major.major_id = '".$major_id."' OR
+        class.general_education_category_id = '".$_POST['mathematicalComputationalThinking']."' OR
+        class.general_education_category_id = '".$_POST['oralCommunication']."' OR
+        class.general_education_category_id = '".$_POST['writtenCommunication']."' OR
+        class.general_education_category_id = '".$_POST['philosphyLiteratureAesthetic']."' OR
+        class.general_education_category_id = '".$_POST['naturalScienceInquiry']."' OR
+        class.general_education_category_id = '".$_POST['historicalBehavioralSocialScience']."' OR
+        class.general_education_category_id = '".$_POST['globalAwarenessCitizenship']."' OR
+        class.general_education_category_id = '".$_POST['wellness']."'
  
     ;";
 
@@ -76,28 +104,6 @@ if ( $Results )
        
     ";
 
-
-
-
-    
-    /*
-    echo"<section id=\"comp100\" class=\"dropdown-box\">
-            <header>
-                <button onclick=\"toggleContent('comp100')\">
-                    <img class=\"icon\" src=\"/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg\">
-                    COMP100 Intro to Computers
-                </button>
-                <button class=\"positive\">Add</button>
-            </header>
-            <article>
-                <h1>Course Description</h1>
-                <p>Example description text.</p>
-                <h1>Prerequisites</h1>
-                <p>None</p>
-            </article>
-        </section>
-    ";
-    */
     }
 
 }
