@@ -1,7 +1,6 @@
 <?php
 
-echo"   <script src=\"../../resources/utilities/scripts/control-panel.js\" defer></script>
-        ";
+echo"   <script src=\"../../resources/utilities/scripts/control-panel.js\" defer></script>";
 
 
 
@@ -112,3 +111,4 @@ echo"   <script src=\"../../resources/utilities/scripts/control-panel.js\" defer
             }
         }
     }
+

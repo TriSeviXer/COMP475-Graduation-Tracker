@@ -16,5 +16,10 @@ $sql = "delete
 
 $conn->query( $sql );
 
+echo"<h1>MY SCHEDULES</h1>";
+
+
 loadSemesterAndCourses($user_id, $conn);
+
+echo"<button class=\"positive\" type=\"button\" onclick=\"toggleDialog('dialog-schedule')\">New Schedule</button>";
 
