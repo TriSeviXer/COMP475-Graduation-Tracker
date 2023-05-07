@@ -3,6 +3,9 @@
 //includes
 require_once 'database-handler.inc.php';
 
+echo"<h1>MY SCHEDULE</h1>";
+
+
 if ($_POST['class_id'] == -1 ){
 }
 else{

@@ -3,6 +3,11 @@
 //includes
 require_once 'database-handler.inc.php';
 
+echo"<h1>AVAILABLE CLASSES</h1>";
+
+
+
+
 // make a select statement to get data from the database
 $SQL = "select class_id, class_code, class_name from class
     where   general_education_category_id = '".$_POST['mathematicalComputationalThinking']."' OR
@@ -19,6 +24,7 @@ $SQL = "select class_id, class_code, class_name from class
 // execute the query
 //      use the query method of the $Connection object
 $Results = $conn->query( $SQL );
+
 
 // check for results
 //      $Results will evaluate to true if there data is returned
@@ -55,6 +61,7 @@ if ( $Results )
         }
 
         echo"
+        
                 </button>
                 <button class=\"positive\" onclick=\"displayScheduledCourses(".$Row[0].")\">Add</button>
             </header>

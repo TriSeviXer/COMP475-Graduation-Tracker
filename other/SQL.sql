@@ -1,16 +1,3 @@
-/*create users table*/
-CREATE TABLE users(
-    userId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    usersFirstName varchar(128) NOT NULL,
-    usersLastName varchar(128) NOT NULL,
-    usersEmail varchar(128) NOT NULL,
-    usersPassword varchar(128) NOT NULL
-);
-
-/*select usersEmail*/
-"SELECT * FROM user WHERE user_email = ?;"
-
-
 /*create user table*/
 CREATE TABLE user(
     user_id int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -105,3 +92,38 @@ VALUES
 ('7', 'Historical, Behavioral, and Social Science'), 
 ('8', 'Global Awareness and Citizenship'), 
 ('9', 'Wellness');
+
+/*create major table*/
+CREATE TABLE major(
+    major_id int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    major_name varchar(128)
+);
+
+/*create class_major table
+intermediary table*/
+CREATE TABLE class_major(
+    class_major_id int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    class_id int(10),
+    major_id int(10),
+    FOREIGN KEY (class_id) REFERENCES class (class_id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    FOREIGN KEY (major_id) REFERENCES major (major_id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+/*Alter user table to include a major_id column*/
+ALTER TABLE user
+ADD major_id int(10),
+ADD FOREIGN KEY (major_id) REFERENCES major(major_id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+;
+
+INSERT INTO `major` (`major_name`) 
+VALUES 
+('Computer Science');
+
+
+

@@ -137,9 +137,9 @@
 
                 </fieldset>
             </form>
-            <section class="container">
-                <h1>AVAILABLE CLASSES</h1>
-                <section id="courses">
+            <section class="container" id="courses">
+            <h1>AVAILABLE CLASSES</h1>
+
 
                     <!--
                     <section id="comp100" class="dropdown-box">
@@ -160,12 +160,10 @@
                     -->
 
                    
-                </section>
             </section>
             
-            <section class="container">
-                <h1>MY SCHEDULE</h1>
-                <section id=myScheduleCourses>
+            <section class="container" id=myScheduleCourses>
+                
 
                 <!--
                     <section id="schedule-comp400" class="dropdown-box">
@@ -185,7 +183,6 @@
                     </section>
                 -->
                 
-                </section>
             </section>
 
         </main>

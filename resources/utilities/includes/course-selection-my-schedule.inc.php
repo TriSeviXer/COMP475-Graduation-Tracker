@@ -3,6 +3,9 @@
 //includes
 require_once 'database-handler.inc.php';
 
+echo"<h1>MY SCHEDULE</h1>";
+
+
 // make a select statement to get data from the database
 $sql= "INSERT INTO semester_class(class_id, semester_id) VALUES (".$_POST['class_id'].",".$_POST['semester_id'].");";
 
