@@ -6,14 +6,20 @@ section.container {
     margin: 1em;
     padding: 1em;
 
-    min-width: auto;
     width: 100vw;
     max-width: 30em;
 
-    background-color: white;
-    border-radius: 0.25em;
+    background-color: var(--color-main-background);
+
+    border-radius: 0.4em;
 
     box-shadow: 1px 1px 20px 1px var(--frm-form-shadow-color);
+}
+
+section.container>h1 {
+    font-size: 19pt;
+    text-transform: capitalize;
+    text-align: center;
 }
 
 section.container>button {

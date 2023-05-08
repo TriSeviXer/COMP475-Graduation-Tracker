@@ -25,14 +25,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body>main>* {
-    box-shadow: 1px 1px 20px 1px var(--color-body-background-shadow);
-}
-
-body>*>form>fieldset>section>* {
-    box-shadow: 1px 1px 1px 1px var(--color-main-background-shadow);
-}
-
 body>main {
     display: flex;
     justify-content: center;

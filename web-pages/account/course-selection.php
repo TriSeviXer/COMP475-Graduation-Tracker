@@ -6,6 +6,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Graduation Tracker</title>
         <link rel="Stylesheet" type="text/css" href="../../resources/utilities/styles/grad-tracker.css">
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
@@ -153,6 +154,171 @@
                 <section id="comp300" class="dropdown-box">
                     <header>
                         <button onclick="toggleContent('comp300')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            COMP100 Intro to Computers
+                        </button>
+                        <button class="positive">Add</button>
+                    </header>
+                    <article>
+                        <h1>Course Description</h1>
+                        <p>Example description text.</p>
+                        <h1>Prerequisites</h1>
+                        <p>None</p>
+                    </article>
+                </section>
+                <section id="comp400" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('comp400')">
                             <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
                             COMP100 Intro to Computers
                         </button>

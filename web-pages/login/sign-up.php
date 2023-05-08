@@ -6,6 +6,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Graduation Tracker</title>
         <link rel="Stylesheet" type="text/css" href="../../resources/utilities/styles/grad-tracker.css">
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
@@ -20,9 +21,10 @@
             <!-- Post method allows for secure data transfer through the form -->
             <form action="../../resources/utilities/includes/sign-up.inc.php" method="post">
 
+                <h1> Sign Up</h1>
+
                 <!-- First form asking for type of signup.-->
                 <fieldset id="f0">
-                    <h1>Sign Up</h1>
                     <p>
                         Welcome to Common Wealth University Graduation Tracker.
                         Please select a signup option.

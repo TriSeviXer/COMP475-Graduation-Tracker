@@ -14,12 +14,11 @@
 
 form {
 
-    margin-top: 1em;
-    padding: 1em 1em 1em 1em;
+    margin: 1em;
+    padding: 1em;
     
     background-color: var(--frm-form-color);
 
-    min-width: auto;
     width: 100vw;
     max-width: 30em;
 
@@ -36,7 +35,8 @@ form fieldset {
     flex-direction: column;
     align-items: flex-start;
 
-    margin: 1em auto 1em auto;
+    margin-block: 0.5em;
+    padding-block: 1em;
 
     border: 0.15em dotted var(--frm-fieldset-border-color);
     border-radius: 0.5em;
@@ -68,10 +68,10 @@ form button {
 */
 
 form>h1 {
-    margin: 0 0 0 0;
-    font-size: 24pt;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-block: 1em;
+    width: 100%;
+    font-size: 19pt;
+    text-transform: capitalize;
     text-align: center;
 }
 
@@ -104,7 +104,7 @@ form fieldset p {
 form fieldset>input,
 form fieldset>select {
     align-self: stretch;
-    margin-bottom: 8pt;
+    margin-block-end: 1em;
     font-size: 14pt;
 }
 
@@ -155,23 +155,22 @@ form fieldset>section {
     flex-wrap: wrap;
     align-items: center;
 
-    margin: 0.5em auto 0.25em auto;
+    margin-block: 0.5em 0;
+    margin-inline: auto;
 }
 
 /*
     Button spacing in a fieldset section.
 */
 form fieldset>section>button {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-inline: 0.5em;
 }
 
 /* 
     Paragraph spacing in a fieldset section.
 */
 form fieldset>section>p {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-block: 0;
 }
 
 /*
@@ -199,4 +198,5 @@ form fieldset>section.left-align {
 
 form>fieldset meter {
     width: 45%;
+    margin-block-end: 1em;
 }
