@@ -9,8 +9,8 @@
 :root {
     
     /* Body Colors */
-    --color-body-background: #a4463c;
-    --color-body-background-shadow: #822121;
+    --color-body-background: #6a2a2f;
+    --color-body-background-shadow: #471a1a;
 
     /* Main Colors */
     --color-main-background: #FFFFFF;
@@ -46,9 +46,6 @@ main.selection {
     align-items: flex-start;
 
 }
-
-
-
 
 img.logo {
     z-index: -10;

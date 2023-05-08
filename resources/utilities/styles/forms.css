@@ -67,6 +67,7 @@ form button {
     ===================================================
 */
 
+/* Form heading style. */
 form>h1 {
     margin-block: 1em;
     width: 100%;
@@ -75,7 +76,7 @@ form>h1 {
     text-align: center;
 }
 
-/* Fieldset properties. */
+/* Legend style. */
 form fieldset legend {
     padding: 0 0.25em 0 0.25em;
     font-size: 12pt;
@@ -83,6 +84,7 @@ form fieldset legend {
     text-transform: uppercase;
 }
 
+/* Heading style. */
 form fieldset h1 {
     font-size: 24pt;
     font-weight: bold;
@@ -90,9 +92,16 @@ form fieldset h1 {
     text-transform: uppercase;
 }
 
+/* Paragraph style. */
 form fieldset p {
     font-size: 12pt;
     margin: 0 0 4pt 0;
+}
+
+/* Style for labels in sections. */
+form fieldset>section label {
+    margin-block-end: 1em;
+    margin-inline: 0.5em;
 }
 
 /*
@@ -101,24 +110,15 @@ form fieldset p {
     ===================================================
 */
 
-form fieldset>input,
-form fieldset>select {
+form fieldset input,
+form fieldset select {
     align-self: stretch;
-    margin-block-end: 1em;
     font-size: 14pt;
-}
 
-form fieldset>section select {
-    min-width: max-content;
-    width: 10em;
-
-    margin-block: 0.1em;
-    margin-inline: 0.5em;
+    margin-block: 0.1em 1em;
 
     padding-block: 0.3em;
-    padding-inline: 1em;
-
-    font-size: 14pt;
+    padding-inline: 0.25em;
 
     border-style: none;
     border-radius: 0.25em;
@@ -126,24 +126,18 @@ form fieldset>section select {
     box-shadow: 1px 1px 1px 1px #a7a7a7;
 }
 
+form fieldset>section select,
 form fieldset>section input[type="number"] {
+    margin-inline: 0.5em;
     min-width: max-content;
     width: 10em;
+}
 
-    margin-block: 0.1em;
-    margin-inline: 0.5em;
-
-    padding-block: 0.3em;
-
-    font-size: 14pt;
-    
+form fieldset>section input[type="number"] {
     border-style: solid;
     border-color: #f3f3f3;
     border-width: 1px;
     border-radius: 0.25em;
-
-    box-shadow: 1px 1px 1px 1px #a7a7a7;
-
 }
 
 /*
@@ -164,6 +158,7 @@ form fieldset>section {
 */
 form fieldset>section>button {
     margin-inline: 0.5em;
+    box-shadow: 1px 1px 1px 1px #a7a7a7;
 }
 
 /* 
