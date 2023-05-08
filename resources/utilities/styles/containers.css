@@ -16,6 +16,15 @@ section.container {
     box-shadow: 1px 1px 20px 1px var(--frm-form-shadow-color);
 }
 
+section.container>section {
+    width: 100%;
+}
+
+section.container>section>h2 {
+    font-size: 16pt;
+    margin-block: 0;
+}
+
 section.container>h1 {
     font-size: 19pt;
     text-transform: capitalize;
