@@ -46,6 +46,17 @@ section.container>button {
 
 }
 
+section.container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+section.container figure img {
+    width: 25%;
+}
+
 section.dialog {
     display: block;
     position: fixed;
@@ -69,4 +80,3 @@ section.dialog>* {
 section.dialog.collapsed {
     display: none;
 }
-
