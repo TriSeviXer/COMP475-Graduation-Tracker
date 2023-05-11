@@ -261,7 +261,8 @@
                 <fieldset>
                     <section>
                         <select name="major" >
-                            <option value="Computer Science">BS Computer Science</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Accounting">Accounting</option>
                         </select>
                     </section>
                     <section class="right-align">
