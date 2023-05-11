@@ -11,6 +11,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Graduation Tracker</title>
         <link rel="Stylesheet" type="text/css" href="../../resources/utilities/styles/grad-tracker.css">
         <script src="../../resources/utilities/scripts/grad-script.js" defer></script>
@@ -29,7 +30,7 @@
             <section class="container">
                 <h1>MY PROFILE</h1>
                 <figure>
-                    <!--<img src="" alt="User profile.">-->
+                    <img src="../../resources/images/icons/icon-user-default.svg" alt="User profile.">
                     <figcaption><?php
                     
                     if (isset($_SESSION["user_id"])){
@@ -82,6 +83,69 @@
                 <!-- Heading for Tracking -->
                 <h1>MY MAJORS</h1>
 
+                <section id="gen-eds" class="dropdown-box">
+                    <header>
+                        <button onclick="toggleContent('gen-eds')">
+                            <img class="icon" src="/COMP475-Graduation-Tracker/resources/images/icons/icon-dropdown.svg">
+                            General Education
+                        </button>
+                        <button class="nutural">View</button>
+                    </header>
+                    <article>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Requirement</th>
+                                        <th>Required</th>
+                                        <th>Met</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mathematical and Computational Thinking</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Written Communication</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oral Communication</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Philosophy, Literature, and Aesthetic</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Natural Science Inquiry</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Historical, Behavioral, and Social Science</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Global Awareness & Citizenship</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wellness</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </article>
+                </section>
+
 
 <!--
                     <section id="user_major_id" class="dropdown-box">
@@ -107,8 +171,6 @@
                 
                 <!-- Heading for Schedules -->
                 <h1>MY SCHEDULES</h1>
-
-
                 
                 <?php
                 

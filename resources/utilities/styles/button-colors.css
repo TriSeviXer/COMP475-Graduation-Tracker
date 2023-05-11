@@ -5,12 +5,12 @@
     --btn-neutral-color-selected: #979797;
 
     /* Button colors for positive actions. */
-    --btn-positive-color: #3bc29a;
-    --btn-positive-color-selected: #2a9072;
+    --btn-positive-color: #0cb4a3;
+    --btn-positive-color-selected: #175c55;
     
     /* Button colors for negative actions. */
-    --btn-negative-color: #d10d0d;
-    --btn-negative-color-selected: #a31818;
+    --btn-negative-color: #b4332b;
+    --btn-negative-color-selected: #901f1f;
     
 }
 
@@ -23,6 +23,8 @@ button, input {
 button.neutral,
 a.neutral {
     color: white;
+    -webkit-text-stroke-color: #e3e3e3;
+    -webkit-text-stroke-width: 0.2px;
     background-color: var(--btn-neutral-color);
 }
 
@@ -35,6 +37,8 @@ a.neutral:hover {
 button.positive,
 a.positive {
     color: white;
+    -webkit-text-stroke-color: #e3e3e3;
+    -webkit-text-stroke-width: 0.2px;
     background-color: var(--btn-positive-color);
 }
 
@@ -47,6 +51,8 @@ a.positive:hover {
 button.negative,
 a.negative {
     color: white;
+    -webkit-text-stroke-color: #e3e3e3;
+    -webkit-text-stroke-width: 0.2px;
     background-color: var(--btn-negative-color);
 }
 
