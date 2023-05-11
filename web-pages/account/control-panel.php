@@ -75,7 +75,7 @@
 
                     ?></figcaption>
                 </figure>
-                <button>Settings</button>
+                <button onclick='location.href="/COMP475-Graduation-Tracker/web-pages/account/user-settings.php"'>Settings</button>
                 <button>Help</button>
             </section>
 
